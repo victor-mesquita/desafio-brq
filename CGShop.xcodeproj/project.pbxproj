@@ -10,8 +10,6 @@
 		02BF2609EA342D58F8244A7D /* Pods_CGShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */; };
 		04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1120FD2007002A1257 /* AppDelegate.swift */; };
 		04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1320FD2007002A1257 /* RootViewController.swift */; };
-		04BDAB1620FD2007002A1257 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1520FD2007002A1257 /* DataViewController.swift */; };
-		04BDAB1820FD2007002A1257 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1720FD2007002A1257 /* ModelController.swift */; };
 		04BDAB1B20FD2007002A1257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1920FD2007002A1257 /* Main.storyboard */; };
 		04BDAB1D20FD200A002A1257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1C20FD200A002A1257 /* Assets.xcassets */; };
 		04BDAB2020FD200A002A1257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1E20FD200A002A1257 /* LaunchScreen.storyboard */; };
@@ -42,8 +40,6 @@
 		04BDAB0E20FD2007002A1257 /* CGShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB1120FD2007002A1257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BDAB1320FD2007002A1257 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		04BDAB1520FD2007002A1257 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		04BDAB1720FD2007002A1257 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		04BDAB1A20FD2007002A1257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BDAB1C20FD200A002A1257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BDAB1F20FD200A002A1257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,11 +114,10 @@
 		04BDAB1020FD2007002A1257 /* CGShop */ = {
 			isa = PBXGroup;
 			children = (
+				84A4609720FE5E3F0026AA99 /* Models */,
+				84A4609620FE5E380026AA99 /* Controllers */,
+				84A4609520FE4B9A0026AA99 /* Views */,
 				04BDAB1120FD2007002A1257 /* AppDelegate.swift */,
-				04BDAB1320FD2007002A1257 /* RootViewController.swift */,
-				04BDAB1520FD2007002A1257 /* DataViewController.swift */,
-				04BDAB1720FD2007002A1257 /* ModelController.swift */,
-				04BDAB1920FD2007002A1257 /* Main.storyboard */,
 				04BDAB1C20FD200A002A1257 /* Assets.xcassets */,
 				04BDAB1E20FD200A002A1257 /* LaunchScreen.storyboard */,
 				04BDAB2120FD200A002A1257 /* Info.plist */,
@@ -156,6 +151,29 @@
 				D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84A4609520FE4B9A0026AA99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04BDAB1920FD2007002A1257 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84A4609620FE5E380026AA99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04BDAB1320FD2007002A1257 /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84A4609720FE5E3F0026AA99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C9D0A79610CFEFBD82F3F462 /* Pods */ = {
@@ -363,8 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
-				04BDAB1820FD2007002A1257 /* ModelController.swift in Sources */,
-				04BDAB1620FD2007002A1257 /* DataViewController.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
