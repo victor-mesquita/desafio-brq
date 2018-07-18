@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		02BF2609EA342D58F8244A7D /* Pods_CGShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */; };
+		04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7720FF7689005C05C5 /* Exo-Bold.ttf */; };
+		04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7820FF768A005C05C5 /* Exo-Regular.ttf */; };
+		04011E7D20FF768B005C05C5 /* Exo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */; };
+		04011E7E20FF768B005C05C5 /* Exo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7A20FF768A005C05C5 /* Exo-Light.ttf */; };
 		04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1120FD2007002A1257 /* AppDelegate.swift */; };
 		04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1320FD2007002A1257 /* RootViewController.swift */; };
 		04BDAB1B20FD2007002A1257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1920FD2007002A1257 /* Main.storyboard */; };
@@ -15,6 +19,12 @@
 		04BDAB2020FD200A002A1257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1E20FD200A002A1257 /* LaunchScreen.storyboard */; };
 		04BDAB2B20FD200A002A1257 /* CGShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB2A20FD200A002A1257 /* CGShopTests.swift */; };
 		04BDAB3620FD200A002A1257 /* CGShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB3520FD200A002A1257 /* CGShopUITests.swift */; };
+		04F678FE20FF7A0B00D43271 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F678FD20FF7A0B00D43271 /* TableViewCell.swift */; };
+		04F6790020FF8A0C00D43271 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F678FF20FF8A0C00D43271 /* Car.swift */; };
+		04F6790220FF9F1B00D43271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790120FF9F1B00D43271 /* Constants.swift */; };
+		04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790420FF9FAA00D43271 /* APIConfiguration.swift */; };
+		04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790820FFA0DB00D43271 /* CarRouter.swift */; };
+		04F6790E20FFB52200D43271 /* NLCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790D20FFB52200D43271 /* NLCar.swift */; };
 		6769D7D2A6A5C3D259EAD153 /* Pods_CGShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152DB0769028C2D066F42E0C /* Pods_CGShopTests.framework */; };
 		B369420E21F503F4909A0388 /* Pods_CGShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04011E7720FF7689005C05C5 /* Exo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.ttf"; sourceTree = "<group>"; };
+		04011E7820FF768A005C05C5 /* Exo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.ttf"; sourceTree = "<group>"; };
+		04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.ttf"; sourceTree = "<group>"; };
+		04011E7A20FF768A005C05C5 /* Exo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Light.ttf"; sourceTree = "<group>"; };
 		04BDAB0E20FD2007002A1257 /* CGShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB1120FD2007002A1257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BDAB1320FD2007002A1257 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +64,12 @@
 		04BDAB3120FD200A002A1257 /* CGShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB3520FD200A002A1257 /* CGShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGShopUITests.swift; sourceTree = "<group>"; };
 		04BDAB3720FD200A002A1257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F678FD20FF7A0B00D43271 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		04F678FF20FF8A0C00D43271 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Car.swift; path = CGShop/Controllers/Car.swift; sourceTree = SOURCE_ROOT; };
+		04F6790120FF9F1B00D43271 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04F6790420FF9FAA00D43271 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		04F6790820FFA0DB00D43271 /* CarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRouter.swift; sourceTree = "<group>"; };
+		04F6790D20FFB52200D43271 /* NLCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLCar.swift; sourceTree = "<group>"; };
 		09210D6ABFB2188A8BAEDD3B /* Pods-CGShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGShopTests/Pods-CGShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		152DB0769028C2D066F42E0C /* Pods_CGShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +109,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04011E7620FF7624005C05C5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04011E7720FF7689005C05C5 /* Exo-Bold.ttf */,
+				04011E7A20FF768A005C05C5 /* Exo-Light.ttf */,
+				04011E7820FF768A005C05C5 /* Exo-Regular.ttf */,
+				04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		04BDAB0520FD2007002A1257 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +145,8 @@
 		04BDAB1020FD2007002A1257 /* CGShop */ = {
 			isa = PBXGroup;
 			children = (
+				04F6790320FF9F9200D43271 /* Helpers */,
+				04011E7620FF7624005C05C5 /* fonts */,
 				84A4609720FE5E3F0026AA99 /* Models */,
 				84A4609620FE5E380026AA99 /* Controllers */,
 				84A4609520FE4B9A0026AA99 /* Views */,
@@ -121,6 +154,7 @@
 				04BDAB1C20FD200A002A1257 /* Assets.xcassets */,
 				04BDAB1E20FD200A002A1257 /* LaunchScreen.storyboard */,
 				04BDAB2120FD200A002A1257 /* Info.plist */,
+				04F6790120FF9F1B00D43271 /* Constants.swift */,
 			);
 			path = CGShop;
 			sourceTree = "<group>";
@@ -141,6 +175,32 @@
 				04BDAB3720FD200A002A1257 /* Info.plist */,
 			);
 			path = CGShopUITests;
+			sourceTree = "<group>";
+		};
+		04F6790320FF9F9200D43271 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				04F6790C20FFB4E700D43271 /* NetworkLayer */,
+				04F6790B20FFB4A000D43271 /* Routers */,
+				04F6790420FF9FAA00D43271 /* APIConfiguration.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04F6790B20FFB4A000D43271 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				04F6790820FFA0DB00D43271 /* CarRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		04F6790C20FFB4E700D43271 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				04F6790D20FFB52200D43271 /* NLCar.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		08412AA9F3D3B159AC13C3D3 /* Frameworks */ = {
@@ -165,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				04BDAB1320FD2007002A1257 /* RootViewController.swift */,
+				04F678FD20FF7A0B00D43271 /* TableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +233,7 @@
 		84A4609720FE5E3F0026AA99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04F678FF20FF8A0C00D43271 /* Car.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +262,7 @@
 				04BDAB0A20FD2007002A1257 /* Sources */,
 				04BDAB0B20FD2007002A1257 /* Frameworks */,
 				04BDAB0C20FD2007002A1257 /* Resources */,
+				F79905FBCED0E8BE059E3AEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,9 +359,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */,
 				04BDAB2020FD200A002A1257 /* LaunchScreen.storyboard in Resources */,
+				04011E7D20FF768B005C05C5 /* Exo-SemiBold.ttf in Resources */,
 				04BDAB1D20FD200A002A1257 /* Assets.xcassets in Resources */,
+				04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */,
 				04BDAB1B20FD2007002A1257 /* Main.storyboard in Resources */,
+				04011E7E20FF768B005C05C5 /* Exo-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +440,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F79905FBCED0E8BE059E3AEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CGShop/Pods-CGShop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CGShop/Pods-CGShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -380,7 +467,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */,
+				04F6790220FF9F1B00D43271 /* Constants.swift in Sources */,
+				04F6790E20FFB52200D43271 /* NLCar.swift in Sources */,
+				04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */,
+				04F678FE20FF7A0B00D43271 /* TableViewCell.swift in Sources */,
 				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
+				04F6790020FF8A0C00D43271 /* Car.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEDMTC57NN;
 				INFOPLIST_FILE = CGShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,6 +668,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEDMTC57NN;
 				INFOPLIST_FILE = CGShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
