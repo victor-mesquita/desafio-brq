@@ -6,49 +6,74 @@
 //  Copyright © 2018 cg. All rights reserved.
 //
 
-import Alamofire
+import Foundation
+import Moya
+import RxSwift
 
-enum CarRouter: APIConfiguration {
-    
+
+let CarProvider = MoyaProvider<CarRouter>(endpointClosure: endpointClosure)
+
+public enum CarRouter {
     case list()
     case car(id: Int)
-    
-    var method: HTTPMethod{
-        switch self {
-        case .car:
-            return .get
-        case .list:
-            return .get
-        }
-    }
+}
 
-    var path: String{
+extension CarRouter : TargetType {
+    public var task: Task {
+        return .requestParameters(parameters: self.parameters!, encoding: parameterEncoding)
+    }
+    
+    public var sampleData: Data {
+        return Data()
+    }
+    
+    public var headers: [String : String]? {
+        return nil
+    }
+    
+    public var baseURL: URL {
+        return URL(string: ENV.API.BASE_URL)!
+    }
+    
+    public var path: String {
         switch self {
         case .list:
-            return "carro/"
+            return "/carros/"
         case .car(let id):
-            return "carro/\(id)"
+            return "/carros/\(id)"
         }
     }
     
-    var parameters: Parameters?{
+    public var method: Moya.Method {
         switch self {
-        case .list:
-            return nil
-        case .car:
+        case .list,
+             .car(_):
+            return .get
+        }
+    }
+    
+    public var parameters: [String: Any]? {
+        switch self {
+        case .car(_),
+             .list:
             return nil
         }
     }
     
-    func asURLRequest() throws -> URLRequest {
-        let url = try ENV.API.BASE_URL.asURL()
-        
-        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        
-        urlRequest.httpMethod = method.rawValue;
-        
-        return urlRequest;
+    public var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }    
+}
+
+var endpointClosure = { (target: CarRouter) -> Endpoint in
+    let url = target.baseURL.appendingPathComponent(target.path).absoluteString
+    let endpoint: Endpoint = Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
+    
+    return endpoint
+}
+
+private extension String {
+    var URLEscapedString: String {
+        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
     }
-    
-    
 }

@@ -12,6 +12,12 @@
 		04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7820FF768A005C05C5 /* Exo-Regular.ttf */; };
 		04011E7D20FF768B005C05C5 /* Exo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */; };
 		04011E7E20FF768B005C05C5 /* Exo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7A20FF768A005C05C5 /* Exo-Light.ttf */; };
+		04217D432100F9A70079226C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D422100F9A70079226C /* Car.swift */; };
+		04217D45210102FA0079226C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D44210102FA0079226C /* RootViewModel.swift */; };
+		04217D4721010F870079226C /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4621010F870079226C /* Decodable.swift */; };
+		04217D492101101B0079226C /* DecodableRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D482101101B0079226C /* DecodableRx.swift */; };
+		04217D4B210110CB0079226C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4A210110CB0079226C /* ServiceError.swift */; };
+		04217D4D210117C00079226C /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4C210117C00079226C /* CarViewModel.swift */; };
 		04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1120FD2007002A1257 /* AppDelegate.swift */; };
 		04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1320FD2007002A1257 /* RootViewController.swift */; };
 		04BDAB1B20FD2007002A1257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1920FD2007002A1257 /* Main.storyboard */; };
@@ -20,11 +26,9 @@
 		04BDAB2B20FD200A002A1257 /* CGShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB2A20FD200A002A1257 /* CGShopTests.swift */; };
 		04BDAB3620FD200A002A1257 /* CGShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB3520FD200A002A1257 /* CGShopUITests.swift */; };
 		04F678FE20FF7A0B00D43271 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F678FD20FF7A0B00D43271 /* TableViewCell.swift */; };
-		04F6790020FF8A0C00D43271 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F678FF20FF8A0C00D43271 /* Car.swift */; };
 		04F6790220FF9F1B00D43271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790120FF9F1B00D43271 /* Constants.swift */; };
 		04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790420FF9FAA00D43271 /* APIConfiguration.swift */; };
 		04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790820FFA0DB00D43271 /* CarRouter.swift */; };
-		04F6790E20FFB52200D43271 /* NLCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790D20FFB52200D43271 /* NLCar.swift */; };
 		6769D7D2A6A5C3D259EAD153 /* Pods_CGShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152DB0769028C2D066F42E0C /* Pods_CGShopTests.framework */; };
 		8467388B21003FBD00823B79 /* ExtensionTeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467388A21003FBD00823B79 /* ExtensionTeta.swift */; };
 		B369420E21F503F4909A0388 /* Pods_CGShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */; };
@@ -52,6 +56,12 @@
 		04011E7820FF768A005C05C5 /* Exo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.ttf"; sourceTree = "<group>"; };
 		04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.ttf"; sourceTree = "<group>"; };
 		04011E7A20FF768A005C05C5 /* Exo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Light.ttf"; sourceTree = "<group>"; };
+		04217D422100F9A70079226C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		04217D44210102FA0079226C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewModel.swift; path = CGShop/Models/RootViewModel.swift; sourceTree = SOURCE_ROOT; };
+		04217D4621010F870079226C /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		04217D482101101B0079226C /* DecodableRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRx.swift; sourceTree = "<group>"; };
+		04217D4A210110CB0079226C /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		04217D4C210117C00079226C /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarViewModel.swift; path = CGShop/Services/Networking/CarViewModel.swift; sourceTree = SOURCE_ROOT; };
 		04BDAB0E20FD2007002A1257 /* CGShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB1120FD2007002A1257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BDAB1320FD2007002A1257 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -66,11 +76,9 @@
 		04BDAB3520FD200A002A1257 /* CGShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGShopUITests.swift; sourceTree = "<group>"; };
 		04BDAB3720FD200A002A1257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F678FD20FF7A0B00D43271 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		04F678FF20FF8A0C00D43271 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Car.swift; path = CGShop/Controllers/Car.swift; sourceTree = SOURCE_ROOT; };
 		04F6790120FF9F1B00D43271 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04F6790420FF9FAA00D43271 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		04F6790820FFA0DB00D43271 /* CarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRouter.swift; sourceTree = "<group>"; };
-		04F6790D20FFB52200D43271 /* NLCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLCar.swift; sourceTree = "<group>"; };
 		09210D6ABFB2188A8BAEDD3B /* Pods-CGShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGShopTests/Pods-CGShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		152DB0769028C2D066F42E0C /* Pods_CGShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +210,8 @@
 		8467388621003DA600823B79 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				04217D44210102FA0079226C /* RootViewModel.swift */,
+				04217D4C210117C00079226C /* CarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -218,8 +228,10 @@
 			isa = PBXGroup;
 			children = (
 				04F6790420FF9FAA00D43271 /* APIConfiguration.swift */,
-				04F6790D20FFB52200D43271 /* NLCar.swift */,
+				04217D482101101B0079226C /* DecodableRx.swift */,
 				04F6790B20FFB4A000D43271 /* Routers */,
+				04217D4621010F870079226C /* Decodable.swift */,
+				04217D4A210110CB0079226C /* ServiceError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -252,7 +264,7 @@
 		84A4609720FE5E3F0026AA99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04F678FF20FF8A0C00D43271 /* Car.swift */,
+				04217D422100F9A70079226C /* Car.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -468,11 +480,21 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CGShop/Pods-CGShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -486,14 +508,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04217D4B210110CB0079226C /* ServiceError.swift in Sources */,
+				04217D45210102FA0079226C /* RootViewModel.swift in Sources */,
 				04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */,
 				04F6790220FF9F1B00D43271 /* Constants.swift in Sources */,
-				04F6790E20FFB52200D43271 /* NLCar.swift in Sources */,
+				04217D4721010F870079226C /* Decodable.swift in Sources */,
 				04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */,
+				04217D4D210117C00079226C /* CarViewModel.swift in Sources */,
 				04F678FE20FF7A0B00D43271 /* TableViewCell.swift in Sources */,
+				04217D432100F9A70079226C /* Car.swift in Sources */,
 				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
 				8467388B21003FBD00823B79 /* ExtensionTeta.swift in Sources */,
-				04F6790020FF8A0C00D43271 /* Car.swift in Sources */,
+				04217D492101101B0079226C /* DecodableRx.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
