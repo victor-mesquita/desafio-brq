@@ -12,14 +12,14 @@ import Kingfisher
 import RxSwift
 import RxCocoa
 
-class RootViewController : UIViewController, UICollectionViewDelegateFlowLayout {
+class RootViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var searchBarFilterCars: UISearchBar!
     fileprivate let refreshControl = UIRefreshControl()
     @IBOutlet weak var cvCars: UICollectionView!
     
     fileprivate let disposeBag = DisposeBag();
-    var cars = [Car]()
+    var cars = [CarViewModel]()
     var viewModel: RootViewModel! = RootViewModel()
     
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,20 +46,40 @@ class RootViewController : UIViewController, UICollectionViewDelegateFlowLayout 
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1
 //    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bindRx()
-        configureRefreshControl()
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productitem", for: indexPath)
+        
+        //let car:CarViewModel = cars[indexPath.row]
+        
+        //        cell.lProductName.text = car.nome
+        
+        //        cell.ivProduct.kf.setImage(with: URL(string: car.imagem!))
+        
+        return cell;
         
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        bindRx()
+        configureRefreshControl()
+        configureUiCollectionLayout()
+        
+    }
+    
     func bindRx(){
         guard let vm = viewModel else { return }
         
         vm.carListResult.drive(onNext: { [weak self] data in
-//            self?.refreshControl.endRefreshing()
-            debugPrint(data)
+            self?.refreshControl.endRefreshing()
+            self?.cars = data
+            self?.cvCars.reloadData()
         }).disposed(by: disposeBag)
 
         searchBarFilterCars.rx.text.orEmpty.bind(to: vm.searchText).disposed(by: disposeBag);
@@ -70,6 +90,10 @@ class RootViewController : UIViewController, UICollectionViewDelegateFlowLayout 
         refreshControl.tintColor = UIColor.lightGray
         
         cvCars.addSubview(refreshControl)
+    }
+    
+    fileprivate func configureUiCollectionLayout(){
+        cvCars.collectionViewLayout = CarGridFlowLayout()
     }
     
     override func didReceiveMemoryWarning() {

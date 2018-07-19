@@ -14,7 +14,7 @@ class RootViewModel {
     
     var triggerRefresh = PublishSubject<Void>()
 
-    var searchText = Variable("")
+    var searchText = BehaviorRelay(value: "")
     let title = "Buscar";
     
     let carListResult: Driver<[CarViewModel]>

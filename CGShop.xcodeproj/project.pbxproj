@@ -18,6 +18,7 @@
 		04217D492101101B0079226C /* DecodableRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D482101101B0079226C /* DecodableRx.swift */; };
 		04217D4B210110CB0079226C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4A210110CB0079226C /* ServiceError.swift */; };
 		04217D4D210117C00079226C /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4C210117C00079226C /* CarViewModel.swift */; };
+		04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */; };
 		04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1120FD2007002A1257 /* AppDelegate.swift */; };
 		04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1320FD2007002A1257 /* RootViewController.swift */; };
 		04BDAB1B20FD2007002A1257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1920FD2007002A1257 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		04217D482101101B0079226C /* DecodableRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRx.swift; sourceTree = "<group>"; };
 		04217D4A210110CB0079226C /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		04217D4C210117C00079226C /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarViewModel.swift; path = CGShop/Services/Networking/CarViewModel.swift; sourceTree = SOURCE_ROOT; };
+		04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGridFlowLayout.swift; sourceTree = "<group>"; };
 		04BDAB0E20FD2007002A1257 /* CGShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB1120FD2007002A1257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BDAB1320FD2007002A1257 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			children = (
 				04BDAB1320FD2007002A1257 /* RootViewController.swift */,
 				04F678FD20FF7A0B00D43271 /* TableViewCell.swift */,
+				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */,
 				04217D4D210117C00079226C /* CarViewModel.swift in Sources */,
 				04F678FE20FF7A0B00D43271 /* TableViewCell.swift in Sources */,
+				04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */,
 				04217D432100F9A70079226C /* Car.swift in Sources */,
 				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
 				8467388B21003FBD00823B79 /* ExtensionTeta.swift in Sources */,
