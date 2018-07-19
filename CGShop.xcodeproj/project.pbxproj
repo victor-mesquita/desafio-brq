@@ -145,7 +145,9 @@
 		04BDAB1020FD2007002A1257 /* CGShop */ = {
 			isa = PBXGroup;
 			children = (
-				04F6790320FF9F9200D43271 /* Helpers */,
+				8467388921003DF100823B79 /* Extensions */,
+				8467388721003DB900823B79 /* Services */,
+				8467388621003DA600823B79 /* ViewModels */,
 				04011E7620FF7624005C05C5 /* fonts */,
 				84A4609720FE5E3F0026AA99 /* Models */,
 				84A4609620FE5E380026AA99 /* Controllers */,
@@ -177,30 +179,12 @@
 			path = CGShopUITests;
 			sourceTree = "<group>";
 		};
-		04F6790320FF9F9200D43271 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				04F6790C20FFB4E700D43271 /* NetworkLayer */,
-				04F6790B20FFB4A000D43271 /* Routers */,
-				04F6790420FF9FAA00D43271 /* APIConfiguration.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		04F6790B20FFB4A000D43271 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
 				04F6790820FFA0DB00D43271 /* CarRouter.swift */,
 			);
 			path = Routers;
-			sourceTree = "<group>";
-		};
-		04F6790C20FFB4E700D43271 /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-				04F6790D20FFB52200D43271 /* NLCar.swift */,
-			);
-			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		08412AA9F3D3B159AC13C3D3 /* Frameworks */ = {
@@ -211,6 +195,38 @@
 				D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8467388621003DA600823B79 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8467388721003DB900823B79 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8467388821003DBF00823B79 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8467388821003DBF00823B79 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04F6790420FF9FAA00D43271 /* APIConfiguration.swift */,
+				04F6790D20FFB52200D43271 /* NLCar.swift */,
+				04F6790B20FFB4A000D43271 /* Routers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8467388921003DF100823B79 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		84A4609520FE4B9A0026AA99 /* Views */ = {
