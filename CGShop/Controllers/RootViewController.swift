@@ -20,7 +20,7 @@ class RootViewController : UIViewController, UICollectionViewDelegateFlowLayout 
     
     fileprivate let disposeBag = DisposeBag();
     var cars = [Car]()
-    var viewModel: RootViewModel!
+    var viewModel: RootViewModel! = RootViewModel()
     
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return self.cars.count
@@ -57,8 +57,9 @@ class RootViewController : UIViewController, UICollectionViewDelegateFlowLayout 
     func bindRx(){
         guard let vm = viewModel else { return }
         
-        vm.carListResult.drive(onNext: { [weak self] _ in
-            self?.refreshControl.endRefreshing()
+        vm.carListResult.drive(onNext: { [weak self] data in
+//            self?.refreshControl.endRefreshing()
+            debugPrint(data)
         }).disposed(by: disposeBag)
 
         searchBarFilterCars.rx.text.orEmpty.bind(to: vm.searchText).disposed(by: disposeBag);

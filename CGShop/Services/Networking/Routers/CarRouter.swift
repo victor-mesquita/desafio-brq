@@ -20,7 +20,7 @@ public enum CarRouter {
 
 extension CarRouter : TargetType {
     public var task: Task {
-        return .requestParameters(parameters: self.parameters!, encoding: parameterEncoding)
+        return .requestPlain
     }
     
     public var sampleData: Data {
@@ -38,9 +38,9 @@ extension CarRouter : TargetType {
     public var path: String {
         switch self {
         case .list:
-            return "/carros/"
+            return "/carro/"
         case .car(let id):
-            return "/carros/\(id)"
+            return "/carro/\(id)"
         }
     }
     

@@ -21,16 +21,13 @@ class RootViewModel {
     
     fileprivate let provider: MoyaProvider<CarRouter>
 
-    init(provider: MoyaProvider<CarRouter>) {
-        self.provider = provider
+    init() {
+        self.provider = CarProvider
         
-        carListResult = triggerRefresh.startWith()
-            .flatMapLatest{_ in
-                    provider.rx.request(.list())
-                        .retry(2)
-                        .observeOn(MainScheduler.instance)
-            }
-            .mapJSON()
+        carListResult = provider.rx.request(.list())
+            .asObservable()
+//            .mapJSON()
+            .mapToModels(Car.self)
             .mapToCarViewModel()
             .asDriver(onErrorJustReturn: [])
     }
