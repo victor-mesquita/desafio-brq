@@ -26,6 +26,7 @@
 		04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790820FFA0DB00D43271 /* CarRouter.swift */; };
 		04F6790E20FFB52200D43271 /* NLCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790D20FFB52200D43271 /* NLCar.swift */; };
 		6769D7D2A6A5C3D259EAD153 /* Pods_CGShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152DB0769028C2D066F42E0C /* Pods_CGShopTests.framework */; };
+		8467388B21003FBD00823B79 /* ExtensionTeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467388A21003FBD00823B79 /* ExtensionTeta.swift */; };
 		B369420E21F503F4909A0388 /* Pods_CGShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66420DA105B9D671A7FE8BFF /* Pods-CGShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CGShopTests/Pods-CGShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D0058B23AF049210D964527 /* Pods-CGShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGShopUITests/Pods-CGShopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8467388A21003FBD00823B79 /* ExtensionTeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTeta.swift; sourceTree = "<group>"; };
 		85AB3F5C1D6DE04D5985745B /* Pods-CGShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGShop/Pods-CGShop.release.xcconfig"; sourceTree = "<group>"; };
 		CEE1CF95A53A10125710199A /* Pods-CGShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CGShop/Pods-CGShop.debug.xcconfig"; sourceTree = "<group>"; };
 		D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +227,7 @@
 		8467388921003DF100823B79 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8467388A21003FBD00823B79 /* ExtensionTeta.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */,
 				04F678FE20FF7A0B00D43271 /* TableViewCell.swift in Sources */,
 				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
+				8467388B21003FBD00823B79 /* ExtensionTeta.swift in Sources */,
 				04F6790020FF8A0C00D43271 /* Car.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 			);
