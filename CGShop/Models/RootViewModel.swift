@@ -11,37 +11,45 @@ import RxCocoa
 import Moya
 
 class RootViewModel {
-    
-    var triggerRefresh = PublishSubject<Void>()
-
     var searchText = BehaviorRelay(value: "")
-    let title = "Buscar";
     
-    var carListResult: Driver<[CarViewModel]>
+    let result = BehaviorRelay<[CarViewModel]>(value: [CarViewModel]())
     
-    var carListResultRefresh: Driver<[CarViewModel]>
+    let searchResult = BehaviorRelay<[CarViewModel]>(value: [CarViewModel]())
     
     fileprivate let provider: MoyaProvider<CarRouter>
-
+    
     init(provider: MoyaProvider<CarRouter>) {
         self.provider = provider
         
-        carListResult = provider.rx.request(.list())
+        //TODO: Adicionado um loading
+        
+        _ = provider.rx.request(.list())
             .asObservable()
-//            .mapJSON()
             .mapToModels(Car.self)
             .mapToCarViewModel()
-            .asDriver(onErrorJustReturn: [])
-    
-        carListResultRefresh = triggerRefresh.startWith(())
-            .flatMapLatest {
-                provider.rx.request(.list())
-                    .retry(3)
-                    .observeOn(MainScheduler.instance)
+            .bind(to: self.result)
+        
+        let searchTextObservable = searchText.asObservable()
+        
+        _ = searchTextObservable
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .map{ query -> [CarViewModel] in
+                let tempCars = self.result.value
+                var filteredCars = [CarViewModel]()
+                
+                if !query.isEmpty{
+                    filteredCars = tempCars.filter{
+                        $0.nome.lowercased().contains(query.lowercased())
+                    }
+                }else {
+                    filteredCars = tempCars
+                }
+                
+                return filteredCars;
             }
-            .mapJSON()
-            .mapToCarViewModel()
-            .asDriver(onErrorJustReturn: [])
+            .bind(to: searchResult)
     }
 }
 

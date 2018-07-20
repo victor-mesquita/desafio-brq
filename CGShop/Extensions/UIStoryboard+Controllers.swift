@@ -13,4 +13,11 @@ extension UIStoryboard {
         }
         return vc
     }
+    
+    var carDetailViewController: CarDetailViewController {
+        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "carDetailViewController") as? CarDetailViewController else {
+            fatalError("CarDetailViewController não foi encontrado")
+        }
+        return vc
+    }
 }
