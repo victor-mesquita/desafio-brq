@@ -17,12 +17,14 @@ class RootViewModel {
     var searchText = BehaviorRelay(value: "")
     let title = "Buscar";
     
-    let carListResult: Driver<[CarViewModel]>
+    var carListResult: Driver<[CarViewModel]>
+    
+    var carListResultRefresh: Driver<[CarViewModel]>
     
     fileprivate let provider: MoyaProvider<CarRouter>
 
-    init() {
-        self.provider = CarProvider
+    init(provider: MoyaProvider<CarRouter>) {
+        self.provider = provider
         
         carListResult = provider.rx.request(.list())
             .asObservable()
@@ -30,5 +32,16 @@ class RootViewModel {
             .mapToModels(Car.self)
             .mapToCarViewModel()
             .asDriver(onErrorJustReturn: [])
+    
+        carListResultRefresh = triggerRefresh.startWith(())
+            .flatMapLatest {
+                provider.rx.request(.list())
+                    .retry(3)
+                    .observeOn(MainScheduler.instance)
+            }
+            .mapJSON()
+            .mapToCarViewModel()
+            .asDriver(onErrorJustReturn: [])
     }
 }
+

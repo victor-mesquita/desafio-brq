@@ -24,12 +24,12 @@ class CarGridFlowLayout: UICollectionViewFlowLayout {
     
     func setupLayout() {
         minimumInteritemSpacing = 1
-        minimumLineSpacing = 1
+        minimumLineSpacing = 6
         scrollDirection = .vertical
     }
     
     func itemWidth() -> CGFloat {
-        return (collectionView!.frame.width/2)-1
+        return (collectionView!.frame.width/2)-3
     }
     
     override var itemSize: CGSize {

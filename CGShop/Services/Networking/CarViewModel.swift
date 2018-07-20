@@ -14,12 +14,14 @@ struct CarViewModel {
     let descricao: String
     let imagem: String
     let id: Int
+    let preco: Float
     
     init(car: Car) {
         self.nome = car.nome ?? ""
         self.descricao = car.descricao ?? ""
         self.imagem = car.imagem!
         self.id = car.id!
+        self.preco = car.preco!
     }
 }
 

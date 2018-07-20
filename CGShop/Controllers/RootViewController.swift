@@ -15,50 +15,28 @@ import RxCocoa
 class RootViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var searchBarFilterCars: UISearchBar!
-    fileprivate let refreshControl = UIRefreshControl()
     @IBOutlet weak var cvCars: UICollectionView!
     
     fileprivate let disposeBag = DisposeBag();
     var cars = [CarViewModel]()
-    var viewModel: RootViewModel! = RootViewModel()
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.cars.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "productitem") as! TableViewCell
-//
-//        let car: Car = cars[indexPath.row]
-//
-//        cell.lProductName.text = car.nome
-//
-//        let borderColor = UIColor(red:102/255, green:102/255, blue:102/255, alpha:1.0)
-//
-//        cell.layer.borderWidth = 1.0
-//        cell.layer.borderColor = borderColor.cgColor
-//
-//        cell.ivProduct.kf.setImage(with: URL(string: car.imagem!))
-//
-//        return cell
-//    }
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
+    var viewModel: RootViewModel?
+    fileprivate let refreshControl = UIRefreshControl()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 10
+        return self.cars.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productitem", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productitem", for: indexPath) as! ProductItemUICollectionViewCell
         
-        //let car:CarViewModel = cars[indexPath.row]
+        let car:CarViewModel = cars[indexPath.row]
         
-        //        cell.lProductName.text = car.nome
+        cell.lbCarName.text = car.nome
         
-        //        cell.ivProduct.kf.setImage(with: URL(string: car.imagem!))
+        cell.ivCar.kf.setImage(with: URL(string: car.imagem))
+        
+        let preco = String(car.preco)
+        cell.lbCarPrice.text = "R$ \(preco)"
         
         return cell;
         
@@ -77,12 +55,24 @@ class RootViewController : UIViewController, UICollectionViewDelegate, UICollect
         guard let vm = viewModel else { return }
         
         vm.carListResult.drive(onNext: { [weak self] data in
-            self?.refreshControl.endRefreshing()
             self?.cars = data
             self?.cvCars.reloadData()
         }).disposed(by: disposeBag)
 
         searchBarFilterCars.rx.text.orEmpty.bind(to: vm.searchText).disposed(by: disposeBag);
+        
+        let tapGestureRecognizer = UITapGestureRecognizer()
+        
+        _ = Observable.of(refreshControl.rx_animating.asObservable(), tapGestureRecognizer.rx.event.map { _ in () })
+            .merge()
+            .bind(to: vm.triggerRefresh)
+            .disposed(by: disposeBag)
+        
+        vm.carListResultRefresh.drive(onNext: { [weak self] data in
+            self?.refreshControl.endRefreshing()
+            self?.cars = data
+            self?.cvCars.reloadData()
+        }).disposed(by: disposeBag)
     }
     
     fileprivate func configureRefreshControl() {
