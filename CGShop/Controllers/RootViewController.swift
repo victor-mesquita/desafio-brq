@@ -13,9 +13,9 @@ import RxSwift
 import RxCocoa
 
 class RootViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    @IBOutlet weak var searchBarFilterCars: UISearchBar!
+ 
     @IBOutlet weak var cvCars: UICollectionView!
+    @IBOutlet weak var searchBarFilterCars: UISearchBar!
     
     fileprivate let disposeBag = DisposeBag();
     var cars = [CarViewModel]()
@@ -27,7 +27,7 @@ class RootViewController : UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productitem", for: indexPath) as! ProductItemUICollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productitem", for: indexPath) as! UICarCellView
         
         setCellData(cell: cell, indexPath: indexPath)
         
@@ -43,12 +43,12 @@ class RootViewController : UIViewController, UICollectionViewDelegate, UICollect
 //        self.present(carDetailViewController, animated: true, completion: nil)
     }
     
-    func setCellData(cell: ProductItemUICollectionViewCell, indexPath: IndexPath){
+    func setCellData(cell: UICarCellView, indexPath: IndexPath){
         let car:CarViewModel = cars[indexPath.row]
         
         cell.lbCarName.text = car.nome
         
-        cell.ivCar.kf.setImage(with: URL(string: car.imagem), placeholder: UIImage(named: "placeholder"))
+        cell.ivCarImage.kf.setImage(with: URL(string: car.imagem), placeholder: UIImage(named: "placeholder"))
 
         let preco = String(car.preco)
         

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0124049321DBFDB7008A40F5 /* UICarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124049221DBFDB7008A40F5 /* UICarCellView.xib */; };
+		0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049621DC158E008A40F5 /* UICarCellView.swift */; };
 		02BF2609EA342D58F8244A7D /* Pods_CGShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */; };
 		04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7720FF7689005C05C5 /* Exo-Bold.ttf */; };
 		04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7820FF768A005C05C5 /* Exo-Regular.ttf */; };
@@ -28,7 +30,6 @@
 		04BDAB2020FD200A002A1257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1E20FD200A002A1257 /* LaunchScreen.storyboard */; };
 		04BDAB2B20FD200A002A1257 /* CGShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB2A20FD200A002A1257 /* CGShopTests.swift */; };
 		04BDAB3620FD200A002A1257 /* CGShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB3520FD200A002A1257 /* CGShopUITests.swift */; };
-		04F678FE20FF7A0B00D43271 /* ProductItemUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F678FD20FF7A0B00D43271 /* ProductItemUICollectionViewCell.swift */; };
 		04F6790220FF9F1B00D43271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790120FF9F1B00D43271 /* Constants.swift */; };
 		04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790420FF9FAA00D43271 /* APIConfiguration.swift */; };
 		04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790820FFA0DB00D43271 /* CarRouter.swift */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0124049221DBFDB7008A40F5 /* UICarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICarCellView.xib; sourceTree = "<group>"; };
+		0124049621DC158E008A40F5 /* UICarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICarCellView.swift; sourceTree = "<group>"; };
 		04011E7720FF7689005C05C5 /* Exo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.ttf"; sourceTree = "<group>"; };
 		04011E7820FF768A005C05C5 /* Exo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.ttf"; sourceTree = "<group>"; };
 		04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		04BDAB3120FD200A002A1257 /* CGShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB3520FD200A002A1257 /* CGShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGShopUITests.swift; sourceTree = "<group>"; };
 		04BDAB3720FD200A002A1257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04F678FD20FF7A0B00D43271 /* ProductItemUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemUICollectionViewCell.swift; sourceTree = "<group>"; };
 		04F6790120FF9F1B00D43271 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04F6790420FF9FAA00D43271 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		04F6790820FFA0DB00D43271 /* CarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRouter.swift; sourceTree = "<group>"; };
@@ -127,6 +129,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0124049421DC1548008A40F5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0124049521DC1559008A40F5 /* CarCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0124049521DC1559008A40F5 /* CarCell */ = {
+			isa = PBXGroup;
+			children = (
+				0124049221DBFDB7008A40F5 /* UICarCellView.xib */,
+				0124049621DC158E008A40F5 /* UICarCellView.swift */,
+			);
+			name = CarCell;
+			sourceTree = "<group>";
+		};
 		04011E7620FF7624005C05C5 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +182,7 @@
 		04BDAB1020FD2007002A1257 /* CGShop */ = {
 			isa = PBXGroup;
 			children = (
+				0124049421DC1548008A40F5 /* Components */,
 				8467388921003DF100823B79 /* Extensions */,
 				8467388721003DB900823B79 /* Services */,
 				8467388621003DA600823B79 /* ViewModels */,
@@ -266,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				04BDAB1320FD2007002A1257 /* RootViewController.swift */,
-				04F678FD20FF7A0B00D43271 /* ProductItemUICollectionViewCell.swift */,
 				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
 				04AB44F7210260B400C5BC7C /* CarDetailViewController.swift */,
 			);
@@ -404,6 +423,7 @@
 			files = (
 				04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */,
 				04BDAB2020FD200A002A1257 /* LaunchScreen.storyboard in Resources */,
+				0124049321DBFDB7008A40F5 /* UICarCellView.xib in Resources */,
 				04011E7D20FF768B005C05C5 /* Exo-SemiBold.ttf in Resources */,
 				04BDAB1D20FD200A002A1257 /* Assets.xcassets in Resources */,
 				04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */,
@@ -521,13 +541,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04217D4B210110CB0079226C /* ServiceError.swift in Sources */,
+				0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */,
 				04217D45210102FA0079226C /* RootViewModel.swift in Sources */,
 				04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */,
 				04F6790220FF9F1B00D43271 /* Constants.swift in Sources */,
 				04217D4721010F870079226C /* Decodable.swift in Sources */,
 				04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */,
 				04217D4D210117C00079226C /* CarViewModel.swift in Sources */,
-				04F678FE20FF7A0B00D43271 /* ProductItemUICollectionViewCell.swift in Sources */,
 				04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */,
 				8442EC6321018C090097A953 /* UIRefreshControl+Rx.swift in Sources */,
 				04217D432100F9A70079226C /* Car.swift in Sources */,
