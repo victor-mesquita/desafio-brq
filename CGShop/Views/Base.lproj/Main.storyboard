@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -111,32 +112,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzg-q3-kQL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Car detail" id="aky-PU-BsN">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="pmw-d8-pgD">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jXC-GV-9oY">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Voltar"/>
-                                                <connections>
-                                                    <action selector="onClick:" destination="Eqb-Oj-aFc" eventType="touchUpInside" id="utR-Ls-xHR"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xlq-VP-yUD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="222"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="QDD-2O-0qi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-gQ-n7Q">
+                                <rect key="frame" x="11" y="30" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Close"/>
+                                <connections>
+                                    <action selector="onClick:" destination="Eqb-Oj-aFc" eventType="touchUpInside" id="ZZ5-xm-LlF"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TO-Kt-mou">
+                                <rect key="frame" x="0.0" y="250" width="375" height="417"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsD-WQ-UPn">
+                                        <rect key="frame" x="167" y="5" width="42" height="24"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="18"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-Bu-ps9">
+                                        <rect key="frame" x="136" y="45" width="103" height="32"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="24"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K03-IM-ETz">
+                                        <rect key="frame" x="147" y="127" width="81" height="24"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="18"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqD-47-R2c">
+                                        <rect key="frame" x="155" y="176" width="65" height="24"/>
+                                        <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="18"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WsD-WQ-UPn" firstAttribute="centerX" secondItem="7TO-Kt-mou" secondAttribute="centerX" id="1d1-16-ikG"/>
+                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="CqD-47-R2c" secondAttribute="trailing" constant="10" id="2Bs-A5-K9I"/>
+                                    <constraint firstItem="K03-IM-ETz" firstAttribute="centerX" secondItem="7TO-Kt-mou" secondAttribute="centerX" id="7WK-P3-EfD"/>
+                                    <constraint firstItem="K03-IM-ETz" firstAttribute="top" secondItem="pBw-Bu-ps9" secondAttribute="bottom" constant="50" id="ADp-0u-ymi"/>
+                                    <constraint firstItem="WsD-WQ-UPn" firstAttribute="top" secondItem="7TO-Kt-mou" secondAttribute="top" constant="5" id="T0y-GO-iiI"/>
+                                    <constraint firstItem="CqD-47-R2c" firstAttribute="top" secondItem="K03-IM-ETz" secondAttribute="bottom" constant="25" id="cxc-3s-BIn"/>
+                                    <constraint firstItem="CqD-47-R2c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7TO-Kt-mou" secondAttribute="leadingMargin" constant="10" id="k2q-ro-JPb"/>
+                                    <constraint firstItem="pBw-Bu-ps9" firstAttribute="top" secondItem="WsD-WQ-UPn" secondAttribute="bottom" constant="16" id="lq7-f1-Bft"/>
+                                    <constraint firstItem="pBw-Bu-ps9" firstAttribute="centerX" secondItem="7TO-Kt-mou" secondAttribute="centerX" id="roe-h9-FKr"/>
+                                    <constraint firstItem="CqD-47-R2c" firstAttribute="centerX" secondItem="7TO-Kt-mou" secondAttribute="centerX" id="voV-ZD-03m"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xlq-VP-yUD" firstAttribute="leading" secondItem="Eyt-MK-3XD" secondAttribute="leading" id="7eG-ih-eBd"/>
+                            <constraint firstItem="7TO-Kt-mou" firstAttribute="top" secondItem="Xlq-VP-yUD" secondAttribute="bottom" constant="8" id="NtU-iI-ihb"/>
+                            <constraint firstItem="Xlq-VP-yUD" firstAttribute="top" secondItem="Eyt-MK-3XD" secondAttribute="top" id="XKp-k0-G7S"/>
+                            <constraint firstItem="7TO-Kt-mou" firstAttribute="bottom" secondItem="Eyt-MK-3XD" secondAttribute="bottom" id="bdD-1X-CpH"/>
+                            <constraint firstItem="Xlq-VP-yUD" firstAttribute="leading" secondItem="7TO-Kt-mou" secondAttribute="leading" id="dkM-QB-mba"/>
+                            <constraint firstItem="Xlq-VP-yUD" firstAttribute="trailing" secondItem="7TO-Kt-mou" secondAttribute="trailing" id="irT-QM-GGM"/>
+                            <constraint firstItem="Xlq-VP-yUD" firstAttribute="trailing" secondItem="Eyt-MK-3XD" secondAttribute="trailing" id="zqw-Vt-1i4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eyt-MK-3XD"/>
                     </view>
+                    <connections>
+                        <outlet property="carImage" destination="Xlq-VP-yUD" id="opG-Bb-co8"/>
+                        <outlet property="lbCarName" destination="pBw-Bu-ps9" id="fNk-bn-JG4"/>
+                        <outlet property="lbCarPrice" destination="WsD-WQ-UPn" id="rDU-Lk-ew2"/>
+                        <outlet property="lbContentDescrition" destination="CqD-47-R2c" id="PxK-5D-2OR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVD-ov-KIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3399" y="-46"/>
+            <point key="canvasLocation" x="3397.5999999999999" y="-46.326836581709152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UnN-GT-nzn">
@@ -157,4 +212,7 @@
             <point key="canvasLocation" x="1732" y="-44.527736131934034"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Close" width="25" height="25"/>
+    </resources>
 </document>

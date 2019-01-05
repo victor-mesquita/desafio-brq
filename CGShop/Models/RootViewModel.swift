@@ -22,12 +22,12 @@ class RootViewModel {
     init(provider: MoyaProvider<CarRouter>) {
         self.provider = provider
         
-        //TODO: Adicionado um loading
+        //TODO: Adicionar um loading
         
         _ = provider.rx.request(.list())
             .asObservable()
             .mapToModels(Car.self)
-            .mapToCarViewModel()
+            .mapToCarViewModelArray()
             .bind(to: self.result)
         
         let searchTextObservable = searchText.asObservable()
@@ -50,6 +50,13 @@ class RootViewModel {
                 return filteredCars;
             }
             .bind(to: searchResult)
+    }
+    
+    func getCar(id: Int) -> Observable<CarViewModel> {
+        return provider.rx.request(.car(id: id))
+            .asObservable()
+            .mapToModel(Car.self)
+            .mapToCarViewModel()
     }
 }
 

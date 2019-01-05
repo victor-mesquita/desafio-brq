@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 struct CarViewModel {
     let nome: String
@@ -15,6 +16,7 @@ struct CarViewModel {
     let imagem: String
     let id: Int
     let preco: Float
+    var carroIndisponivel: Bool = false
     
     init(car: Car) {
         self.nome = car.nome ?? ""
@@ -23,15 +25,34 @@ struct CarViewModel {
         self.id = car.id!
         self.preco = car.preco!
     }
+    
+    
 }
 
 extension Observable {
-    func mapToCarViewModel() -> Observable<[CarViewModel]> {
+    func mapToCarViewModelArray() -> Observable<[CarViewModel]> {
         return self.map { cars in
             if let cars  = cars as? [Car] {
                 return cars.map { return CarViewModel(car: $0) }
             } else {
                 return []
+            }
+        }
+    }
+    
+    func mapToCarViewModel() -> Observable<CarViewModel> {
+        return self.map { car in
+            if let car = car as? Car {
+                var carViewModel = CarViewModel(car: car)
+                
+                if(carViewModel.id == 0)
+                {
+                    carViewModel.carroIndisponivel = true
+                }
+                
+                return carViewModel;
+            } else {
+                return CarViewModel(car: Car(id: nil, nome: nil, descricao: nil, marca: nil, quantidade: nil, preco: nil, imagem: nil))
             }
         }
     }

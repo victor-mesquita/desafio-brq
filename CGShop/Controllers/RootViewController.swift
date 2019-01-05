@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 
 class RootViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
- 
+    
     @IBOutlet weak var cvCars: UICollectionView!
     @IBOutlet weak var searchBarFilterCars: UISearchBar!
     
@@ -36,11 +36,39 @@ class RootViewController : UIViewController, UICollectionViewDelegate, UICollect
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        debugPrint(indexPath.item)
-
-        let carDetailViewController = UIStoryboard.main.carDetailViewController
-        self.navigationController?.pushViewController(carDetailViewController, animated: true)
-//        self.present(carDetailViewController, animated: true, completion: nil)
+        guard let vm = viewModel else { return }
+        
+        self.view.showLoading()
+        
+        vm.getCar(id: cars[indexPath.item].id)
+            .subscribe(onNext: { [weak self] data in
+                let carDetailViewController = self?.createCarDetailControllerWithVM(carViewModel: data)
+                
+                self?.view.closeLoading()
+                
+                self?.checkCarIsAvailable(carViewModel: data, callback: {
+                    
+                    self?.navigationController?.pushViewController(carDetailViewController!, animated: true)
+                    self?.present(carDetailViewController!, animated: true, completion: nil)
+                })
+                
+            }).disposed(by: disposeBag)
+    }
+    
+    func checkCarIsAvailable(carViewModel: CarViewModel,  callback: (() -> Swift.Void)? = nil){
+        
+        if(carViewModel.carroIndisponivel){
+            let alert = UIAlertController(title: "Carro indisponível", message: "O carro selecionado não está disponível para compra!", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        if(callback != nil) {
+            callback!()
+        }
     }
     
     func setCellData(cell: UICarCellView, indexPath: IndexPath){
@@ -49,15 +77,24 @@ class RootViewController : UIViewController, UICollectionViewDelegate, UICollect
         cell.lbCarName.text = car.nome
         
         cell.ivCarImage.kf.setImage(with: URL(string: car.imagem), placeholder: UIImage(named: "placeholder"))
-
+        
         let preco = String(car.preco)
         
         cell.lbCarPrice.text = "R$ \(preco)"
     }
     
+    func createCarDetailControllerWithVM(carViewModel: CarViewModel) -> CarDetailViewController {
+        let carDetailViewController = UIStoryboard.main.carDetailViewController;
+        carDetailViewController.viewModel = carViewModel;
+        
+        return carDetailViewController;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
+        self.view.showLoading()
         
         bindRx()
         configureUiCollectionLayout()
@@ -71,14 +108,15 @@ class RootViewController : UIViewController, UICollectionViewDelegate, UICollect
         vm.result.subscribe(onNext: { [weak self] data in
             self?.cars = data;
             self?.cvCars.reloadData()
-        })
-            .disposed(by: disposeBag)
+            self?.view.closeLoading()
+        }).disposed(by: disposeBag)
         
         vm.searchResult.subscribe(onNext: { [weak self] filteredData in
             self?.cars = filteredData
             self?.cvCars.reloadData()
         }).disposed(by: disposeBag)
     }
+    
     
     fileprivate func configureUiCollectionLayout(){
         cvCars.collectionViewLayout = CarGridFlowLayout()

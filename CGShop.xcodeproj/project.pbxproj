@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0124049321DBFDB7008A40F5 /* UICarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124049221DBFDB7008A40F5 /* UICarCellView.xib */; };
 		0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049621DC158E008A40F5 /* UICarCellView.swift */; };
+		012404A021DFC358008A40F5 /* RoundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049F21DFC358008A40F5 /* RoundUIView.swift */; };
+		012404A421E168A8008A40F5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A321E168A8008A40F5 /* UIView.swift */; };
 		02BF2609EA342D58F8244A7D /* Pods_CGShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */; };
 		04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7720FF7689005C05C5 /* Exo-Bold.ttf */; };
 		04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7820FF768A005C05C5 /* Exo-Regular.ttf */; };
@@ -21,7 +23,7 @@
 		04217D4B210110CB0079226C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4A210110CB0079226C /* ServiceError.swift */; };
 		04217D4D210117C00079226C /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4C210117C00079226C /* CarViewModel.swift */; };
 		04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */; };
-		04AB44F621025C7B00C5BC7C /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44F521025C7B00C5BC7C /* DismissKeyboard.swift */; };
+		04AB44F621025C7B00C5BC7C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44F521025C7B00C5BC7C /* UIViewController.swift */; };
 		04AB44F8210260B400C5BC7C /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44F7210260B400C5BC7C /* CarDetailViewController.swift */; };
 		04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1120FD2007002A1257 /* AppDelegate.swift */; };
 		04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1320FD2007002A1257 /* RootViewController.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		0124049221DBFDB7008A40F5 /* UICarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICarCellView.xib; sourceTree = "<group>"; };
 		0124049621DC158E008A40F5 /* UICarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICarCellView.swift; sourceTree = "<group>"; };
+		0124049F21DFC358008A40F5 /* RoundUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIView.swift; sourceTree = "<group>"; };
+		012404A321E168A8008A40F5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		04011E7720FF7689005C05C5 /* Exo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.ttf"; sourceTree = "<group>"; };
 		04011E7820FF768A005C05C5 /* Exo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.ttf"; sourceTree = "<group>"; };
 		04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -70,7 +74,7 @@
 		04217D4A210110CB0079226C /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		04217D4C210117C00079226C /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarViewModel.swift; path = CGShop/Services/Networking/CarViewModel.swift; sourceTree = SOURCE_ROOT; };
 		04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGridFlowLayout.swift; sourceTree = "<group>"; };
-		04AB44F521025C7B00C5BC7C /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
+		04AB44F521025C7B00C5BC7C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		04AB44F7210260B400C5BC7C /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		04BDAB0E20FD2007002A1257 /* CGShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB1120FD2007002A1257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		0124049421DC1548008A40F5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0124049E21DFC343008A40F5 /* RoundUIView */,
 				0124049521DC1559008A40F5 /* CarCell */,
 			);
 			path = Components;
@@ -144,6 +149,14 @@
 				0124049621DC158E008A40F5 /* UICarCellView.swift */,
 			);
 			name = CarCell;
+			sourceTree = "<group>";
+		};
+		0124049E21DFC343008A40F5 /* RoundUIView */ = {
+			isa = PBXGroup;
+			children = (
+				0124049F21DFC358008A40F5 /* RoundUIView.swift */,
+			);
+			name = RoundUIView;
 			sourceTree = "<group>";
 		};
 		04011E7620FF7624005C05C5 /* fonts */ = {
@@ -269,7 +282,8 @@
 			children = (
 				8442EC6121018C090097A953 /* UIRefreshControl+Rx.swift */,
 				8442EC6021018C080097A953 /* UIStoryboard+Controllers.swift */,
-				04AB44F521025C7B00C5BC7C /* DismissKeyboard.swift */,
+				04AB44F521025C7B00C5BC7C /* UIViewController.swift */,
+				012404A321E168A8008A40F5 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -541,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04217D4B210110CB0079226C /* ServiceError.swift in Sources */,
+				012404A021DFC358008A40F5 /* RoundUIView.swift in Sources */,
 				0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */,
 				04217D45210102FA0079226C /* RootViewModel.swift in Sources */,
 				04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */,
@@ -552,9 +567,10 @@
 				8442EC6321018C090097A953 /* UIRefreshControl+Rx.swift in Sources */,
 				04217D432100F9A70079226C /* Car.swift in Sources */,
 				04AB44F8210260B400C5BC7C /* CarDetailViewController.swift in Sources */,
+				012404A421E168A8008A40F5 /* UIView.swift in Sources */,
 				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
 				04217D492101101B0079226C /* DecodableRx.swift in Sources */,
-				04AB44F621025C7B00C5BC7C /* DismissKeyboard.swift in Sources */,
+				04AB44F621025C7B00C5BC7C /* UIViewController.swift in Sources */,
 				8442EC6221018C090097A953 /* UIStoryboard+Controllers.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 			);
