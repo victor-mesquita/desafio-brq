@@ -11,6 +11,7 @@
 		0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049621DC158E008A40F5 /* UICarCellView.swift */; };
 		012404A021DFC358008A40F5 /* RoundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049F21DFC358008A40F5 /* RoundUIView.swift */; };
 		012404A421E168A8008A40F5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A321E168A8008A40F5 /* UIView.swift */; };
+		012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A621E17FA6008A40F5 /* RoundButton.swift */; };
 		02BF2609EA342D58F8244A7D /* Pods_CGShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */; };
 		04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7720FF7689005C05C5 /* Exo-Bold.ttf */; };
 		04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7820FF768A005C05C5 /* Exo-Regular.ttf */; };
@@ -63,6 +64,7 @@
 		0124049621DC158E008A40F5 /* UICarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICarCellView.swift; sourceTree = "<group>"; };
 		0124049F21DFC358008A40F5 /* RoundUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIView.swift; sourceTree = "<group>"; };
 		012404A321E168A8008A40F5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		012404A621E17FA6008A40F5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		04011E7720FF7689005C05C5 /* Exo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.ttf"; sourceTree = "<group>"; };
 		04011E7820FF768A005C05C5 /* Exo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.ttf"; sourceTree = "<group>"; };
 		04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		0124049421DC1548008A40F5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				012404A521E17F89008A40F5 /* RoundButton */,
 				0124049E21DFC343008A40F5 /* RoundUIView */,
 				0124049521DC1559008A40F5 /* CarCell */,
 			);
@@ -157,6 +160,14 @@
 				0124049F21DFC358008A40F5 /* RoundUIView.swift */,
 			);
 			name = RoundUIView;
+			sourceTree = "<group>";
+		};
+		012404A521E17F89008A40F5 /* RoundButton */ = {
+			isa = PBXGroup;
+			children = (
+				012404A621E17FA6008A40F5 /* RoundButton.swift */,
+			);
+			name = RoundButton;
 			sourceTree = "<group>";
 		};
 		04011E7620FF7624005C05C5 /* fonts */ = {
@@ -570,6 +581,7 @@
 				012404A421E168A8008A40F5 /* UIView.swift in Sources */,
 				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
 				04217D492101101B0079226C /* DecodableRx.swift in Sources */,
+				012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */,
 				04AB44F621025C7B00C5BC7C /* UIViewController.swift in Sources */,
 				8442EC6221018C090097A953 /* UIStoryboard+Controllers.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
