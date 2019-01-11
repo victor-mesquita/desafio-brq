@@ -27,15 +27,15 @@ class CarService : ServiceBase {
                             let cars = try jsonDecoder.decode([Car].self, from: response.data)
                             callback(true, cars , nil)
                         }catch{
-                            callback(false, nil, ErrorMessage.jsonDecodeError)
+                            callback(false, nil, ErrorMessage.JSON_DECODE_ERROR)
                         }
                         
                     }else{
-                        callback(false, nil, ErrorMessage.requestError)
+                        callback(false, nil, ErrorMessage.REQUEST_ERROR)
                     }
                     
                 case .error(_):
-                    callback(false, nil, ErrorMessage.requestError)
+                    callback(false, nil, ErrorMessage.REQUEST_ERROR)
                 }
             }
             .disposed(by: bag)
@@ -44,7 +44,7 @@ class CarService : ServiceBase {
     static func getCar(id: Int, callback: @escaping (Bool, Car?, String?) -> Void){
         moyaProvider
             .rx
-            .request(.listCars())
+            .request(.getCar(id: id))
             .subscribe { event in
                 switch event {
                 case let .success(response):
@@ -54,15 +54,15 @@ class CarService : ServiceBase {
                             let car = try jsonDecoder.decode(Car.self, from: response.data)
                             callback(true, car , nil)
                         }catch{
-                            callback(false, nil, ErrorMessage.jsonDecodeError)
+                            callback(false, nil, ErrorMessage.JSON_DECODE_ERROR)
                         }
                         
                     }else{
-                        callback(false, nil, ErrorMessage.requestError)
+                        callback(false, nil, ErrorMessage.REQUEST_ERROR)
                     }
                     
                 case .error(_):
-                    callback(false, nil, ErrorMessage.requestError)
+                    callback(false, nil, ErrorMessage.REQUEST_ERROR)
                 }
             }
             .disposed(by: bag)

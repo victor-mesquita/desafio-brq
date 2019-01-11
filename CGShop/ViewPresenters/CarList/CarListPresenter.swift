@@ -9,22 +9,21 @@
 import Foundation
 
 protocol CarListPresenterProtocol {
-    func fetchCarList()
+    func fetchCarList() -> Void
 }
 
 class CarListPresenter : BasePresenter<CarListViewController>, CarListPresenterProtocol {
     var carListSearchable: [Car] = [Car]();
     
-    func fetchCarList() {
-        self.viewController!.view.showLoading()
+    func fetchCarList() -> Void {
+        self.viewController?.showLoading()
         
         CarService.listCars{ (success, cars, errorMessage) in
             if success {
                 self.carListSearchable = cars!;
                 self.viewController?.reloadCarList(cars: cars!)
             }
-            
-            self.viewController?.view.closeLoading()
+            self.viewController?.hideLoading()
         }
     }
     

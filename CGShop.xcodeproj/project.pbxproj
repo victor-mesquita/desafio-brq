@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010095EF21E9222C00B9F143 /* LoadableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010095EE21E9222C00B9F143 /* LoadableViewController.swift */; };
+		010095F121E92C6E00B9F143 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010095F021E92C6E00B9F143 /* BaseView.swift */; };
 		0124049321DBFDB7008A40F5 /* UICarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124049221DBFDB7008A40F5 /* UICarCellView.xib */; };
 		0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049621DC158E008A40F5 /* UICarCellView.swift */; };
 		012404A421E168A8008A40F5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A321E168A8008A40F5 /* UIView.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010095EE21E9222C00B9F143 /* LoadableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableViewController.swift; sourceTree = "<group>"; };
+		010095F021E92C6E00B9F143 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		0124049221DBFDB7008A40F5 /* UICarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICarCellView.xib; sourceTree = "<group>"; };
 		0124049621DC158E008A40F5 /* UICarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICarCellView.swift; sourceTree = "<group>"; };
 		012404A321E168A8008A40F5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 			children = (
 				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
 				01C16ED521E7DAC100DB4C88 /* BasePresenter.swift */,
+				010095EE21E9222C00B9F143 /* LoadableViewController.swift */,
+				010095F021E92C6E00B9F143 /* BaseView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -522,9 +528,8 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -532,9 +537,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -556,12 +560,14 @@
 				01C16ECD21E7C5C200DB4C88 /* ServiceBase.swift in Sources */,
 				04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */,
 				04217D432100F9A70079226C /* Car.swift in Sources */,
+				010095EF21E9222C00B9F143 /* LoadableViewController.swift in Sources */,
 				012404A421E168A8008A40F5 /* UIView.swift in Sources */,
 				01C16EDD21E900FE00DB4C88 /* CarDetailPresenter.swift in Sources */,
 				01C16EDB21E900F100DB4C88 /* CarDetailViewController.swift in Sources */,
 				01C16ED321E7D9CE00DB4C88 /* CarListPresenter.swift in Sources */,
 				01C16ED621E7DAC100DB4C88 /* BasePresenter.swift in Sources */,
 				012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */,
+				010095F121E92C6E00B9F143 /* BaseView.swift in Sources */,
 				04AB44F621025C7B00C5BC7C /* UIViewController.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 			);

@@ -100,7 +100,7 @@
                     <connections>
                         <outlet property="filterCarSearchBar" destination="tlZ-Eu-Gm1" id="gy7-mx-wMf"/>
                         <outlet property="uiCarsCollection" destination="pQB-bF-0oE" id="Pvc-u8-AfI"/>
-                        <segue destination="Eqb-Oj-aFc" kind="showDetail" id="JHw-Hj-65D"/>
+                        <segue destination="Eqb-Oj-aFc" kind="showDetail" identifier="carDetailSegue" id="JHw-Hj-65D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
@@ -127,7 +127,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Close"/>
                                 <connections>
-                                    <action selector="onClick:" destination="Eqb-Oj-aFc" eventType="touchUpInside" id="ZZ5-xm-LlF"/>
+                                    <action selector="onClick:" destination="Eqb-Oj-aFc" eventType="touchUpInside" id="aWW-c0-3xH"/>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TO-Kt-mou">
@@ -238,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVD-ov-KIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3751" y="-45"/>
+            <point key="canvasLocation" x="3749.5999999999999" y="-45.42728635682159"/>
         </scene>
     </scenes>
     <resources>

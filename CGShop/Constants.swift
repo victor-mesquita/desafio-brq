@@ -14,6 +14,16 @@ struct ENV {
 
 
 struct ErrorMessage {
-    static let requestError = "Failed to finish request!"
-    static let jsonDecodeError = "Failed to decode JSON string"
+    static let REQUEST_ERROR = "Failed to finish request!"
+    static let JSON_DECODE_ERROR = "Failed to decode JSON string"
+}
+
+struct Segues {
+    static let CAR_DETAIL_SEGUE = "carDetailSegue"
+}
+
+struct ReusableIds {
+    struct CarList {
+        static let PRODUCT_ITEM_CELL = "productitem"
+    }
 }
