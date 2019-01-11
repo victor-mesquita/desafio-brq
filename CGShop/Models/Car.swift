@@ -6,7 +6,6 @@
 //  Copyright © 2018 cg. All rights reserved.
 //
 import Foundation
-import SwiftyJSON
 
 struct Car : Codable{
     let id: Int
