@@ -11,3 +11,9 @@ struct ENV {
         static let BASE_URL = "http://desafiobrq.herokuapp.com/v1/"
     }
 }
+
+
+struct ErrorMessage {
+    static let requestError = "Failed to finish request!"
+    static let jsonDecodeError = "Failed to decode JSON string"
+}

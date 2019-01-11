@@ -9,36 +9,32 @@
 /* Begin PBXBuildFile section */
 		0124049321DBFDB7008A40F5 /* UICarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124049221DBFDB7008A40F5 /* UICarCellView.xib */; };
 		0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049621DC158E008A40F5 /* UICarCellView.swift */; };
-		012404A021DFC358008A40F5 /* RoundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049F21DFC358008A40F5 /* RoundUIView.swift */; };
 		012404A421E168A8008A40F5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A321E168A8008A40F5 /* UIView.swift */; };
 		012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A621E17FA6008A40F5 /* RoundButton.swift */; };
+		01C16EC921E7BA8900DB4C88 /* BRQAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16EC821E7BA8900DB4C88 /* BRQAPIService.swift */; };
+		01C16ECB21E7BE7B00DB4C88 /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16ECA21E7BE7B00DB4C88 /* CarService.swift */; };
+		01C16ECD21E7C5C200DB4C88 /* ServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16ECC21E7C5C200DB4C88 /* ServiceBase.swift */; };
+		01C16ED121E7D96700DB4C88 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16ED021E7D96700DB4C88 /* CarListViewController.swift */; };
+		01C16ED321E7D9CE00DB4C88 /* CarListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16ED221E7D9CE00DB4C88 /* CarListPresenter.swift */; };
+		01C16ED621E7DAC100DB4C88 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16ED521E7DAC100DB4C88 /* BasePresenter.swift */; };
+		01C16EDB21E900F100DB4C88 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16EDA21E900F100DB4C88 /* CarDetailViewController.swift */; };
+		01C16EDD21E900FE00DB4C88 /* CarDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16EDC21E900FE00DB4C88 /* CarDetailPresenter.swift */; };
 		02BF2609EA342D58F8244A7D /* Pods_CGShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */; };
 		04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7720FF7689005C05C5 /* Exo-Bold.ttf */; };
 		04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7820FF768A005C05C5 /* Exo-Regular.ttf */; };
 		04011E7D20FF768B005C05C5 /* Exo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */; };
 		04011E7E20FF768B005C05C5 /* Exo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04011E7A20FF768A005C05C5 /* Exo-Light.ttf */; };
 		04217D432100F9A70079226C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D422100F9A70079226C /* Car.swift */; };
-		04217D45210102FA0079226C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D44210102FA0079226C /* RootViewModel.swift */; };
-		04217D4721010F870079226C /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4621010F870079226C /* Decodable.swift */; };
-		04217D492101101B0079226C /* DecodableRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D482101101B0079226C /* DecodableRx.swift */; };
-		04217D4B210110CB0079226C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4A210110CB0079226C /* ServiceError.swift */; };
-		04217D4D210117C00079226C /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4C210117C00079226C /* CarViewModel.swift */; };
 		04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */; };
 		04AB44F621025C7B00C5BC7C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44F521025C7B00C5BC7C /* UIViewController.swift */; };
-		04AB44F8210260B400C5BC7C /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44F7210260B400C5BC7C /* CarDetailViewController.swift */; };
 		04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1120FD2007002A1257 /* AppDelegate.swift */; };
-		04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB1320FD2007002A1257 /* RootViewController.swift */; };
 		04BDAB1B20FD2007002A1257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1920FD2007002A1257 /* Main.storyboard */; };
 		04BDAB1D20FD200A002A1257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1C20FD200A002A1257 /* Assets.xcassets */; };
 		04BDAB2020FD200A002A1257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDAB1E20FD200A002A1257 /* LaunchScreen.storyboard */; };
 		04BDAB2B20FD200A002A1257 /* CGShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB2A20FD200A002A1257 /* CGShopTests.swift */; };
 		04BDAB3620FD200A002A1257 /* CGShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BDAB3520FD200A002A1257 /* CGShopUITests.swift */; };
 		04F6790220FF9F1B00D43271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790120FF9F1B00D43271 /* Constants.swift */; };
-		04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790420FF9FAA00D43271 /* APIConfiguration.swift */; };
-		04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6790820FFA0DB00D43271 /* CarRouter.swift */; };
 		6769D7D2A6A5C3D259EAD153 /* Pods_CGShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152DB0769028C2D066F42E0C /* Pods_CGShopTests.framework */; };
-		8442EC6221018C090097A953 /* UIStoryboard+Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442EC6021018C080097A953 /* UIStoryboard+Controllers.swift */; };
-		8442EC6321018C090097A953 /* UIRefreshControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442EC6121018C090097A953 /* UIRefreshControl+Rx.swift */; };
 		B369420E21F503F4909A0388 /* Pods_CGShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,25 +58,25 @@
 /* Begin PBXFileReference section */
 		0124049221DBFDB7008A40F5 /* UICarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICarCellView.xib; sourceTree = "<group>"; };
 		0124049621DC158E008A40F5 /* UICarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICarCellView.swift; sourceTree = "<group>"; };
-		0124049F21DFC358008A40F5 /* RoundUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIView.swift; sourceTree = "<group>"; };
 		012404A321E168A8008A40F5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		012404A621E17FA6008A40F5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		01C16EC821E7BA8900DB4C88 /* BRQAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRQAPIService.swift; sourceTree = "<group>"; };
+		01C16ECA21E7BE7B00DB4C88 /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
+		01C16ECC21E7C5C200DB4C88 /* ServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBase.swift; sourceTree = "<group>"; };
+		01C16ED021E7D96700DB4C88 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
+		01C16ED221E7D9CE00DB4C88 /* CarListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenter.swift; sourceTree = "<group>"; };
+		01C16ED521E7DAC100DB4C88 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		01C16EDA21E900F100DB4C88 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
+		01C16EDC21E900FE00DB4C88 /* CarDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailPresenter.swift; sourceTree = "<group>"; };
 		04011E7720FF7689005C05C5 /* Exo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.ttf"; sourceTree = "<group>"; };
 		04011E7820FF768A005C05C5 /* Exo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.ttf"; sourceTree = "<group>"; };
 		04011E7920FF768A005C05C5 /* Exo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-SemiBold.ttf"; sourceTree = "<group>"; };
 		04011E7A20FF768A005C05C5 /* Exo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Light.ttf"; sourceTree = "<group>"; };
 		04217D422100F9A70079226C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		04217D44210102FA0079226C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewModel.swift; path = CGShop/Models/RootViewModel.swift; sourceTree = SOURCE_ROOT; };
-		04217D4621010F870079226C /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
-		04217D482101101B0079226C /* DecodableRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRx.swift; sourceTree = "<group>"; };
-		04217D4A210110CB0079226C /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
-		04217D4C210117C00079226C /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarViewModel.swift; path = CGShop/Services/Networking/CarViewModel.swift; sourceTree = SOURCE_ROOT; };
 		04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGridFlowLayout.swift; sourceTree = "<group>"; };
 		04AB44F521025C7B00C5BC7C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		04AB44F7210260B400C5BC7C /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		04BDAB0E20FD2007002A1257 /* CGShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BDAB1120FD2007002A1257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04BDAB1320FD2007002A1257 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		04BDAB1A20FD2007002A1257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BDAB1C20FD200A002A1257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BDAB1F20FD200A002A1257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,15 +88,11 @@
 		04BDAB3520FD200A002A1257 /* CGShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGShopUITests.swift; sourceTree = "<group>"; };
 		04BDAB3720FD200A002A1257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F6790120FF9F1B00D43271 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		04F6790420FF9FAA00D43271 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
-		04F6790820FFA0DB00D43271 /* CarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRouter.swift; sourceTree = "<group>"; };
 		09210D6ABFB2188A8BAEDD3B /* Pods-CGShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGShopTests/Pods-CGShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		152DB0769028C2D066F42E0C /* Pods_CGShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C282A36023B5537EB7BF5F /* Pods_CGShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66420DA105B9D671A7FE8BFF /* Pods-CGShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CGShopTests/Pods-CGShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D0058B23AF049210D964527 /* Pods-CGShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGShopUITests/Pods-CGShopUITests.release.xcconfig"; sourceTree = "<group>"; };
-		8442EC6021018C080097A953 /* UIStoryboard+Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Controllers.swift"; sourceTree = "<group>"; };
-		8442EC6121018C090097A953 /* UIRefreshControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Rx.swift"; sourceTree = "<group>"; };
 		85AB3F5C1D6DE04D5985745B /* Pods-CGShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGShop/Pods-CGShop.release.xcconfig"; sourceTree = "<group>"; };
 		CEE1CF95A53A10125710199A /* Pods-CGShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CGShop/Pods-CGShop.debug.xcconfig"; sourceTree = "<group>"; };
 		D3461CA62CFF47292F1C10AB /* Pods_CGShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				012404A521E17F89008A40F5 /* RoundButton */,
-				0124049E21DFC343008A40F5 /* RoundUIView */,
 				0124049521DC1559008A40F5 /* CarCell */,
 			);
 			path = Components;
@@ -154,20 +145,56 @@
 			name = CarCell;
 			sourceTree = "<group>";
 		};
-		0124049E21DFC343008A40F5 /* RoundUIView */ = {
-			isa = PBXGroup;
-			children = (
-				0124049F21DFC358008A40F5 /* RoundUIView.swift */,
-			);
-			name = RoundUIView;
-			sourceTree = "<group>";
-		};
 		012404A521E17F89008A40F5 /* RoundButton */ = {
 			isa = PBXGroup;
 			children = (
 				012404A621E17FA6008A40F5 /* RoundButton.swift */,
 			);
 			name = RoundButton;
+			sourceTree = "<group>";
+		};
+		01C16EC721E7BA6400DB4C88 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				01C16EC821E7BA8900DB4C88 /* BRQAPIService.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		01C16ECE21E7D93000DB4C88 /* ViewPresenters */ = {
+			isa = PBXGroup;
+			children = (
+				01C16ED921E9006200DB4C88 /* CarDetail */,
+				01C16ECF21E7D94300DB4C88 /* CarList */,
+			);
+			path = ViewPresenters;
+			sourceTree = "<group>";
+		};
+		01C16ECF21E7D94300DB4C88 /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				01C16ED021E7D96700DB4C88 /* CarListViewController.swift */,
+				01C16ED221E7D9CE00DB4C88 /* CarListPresenter.swift */,
+			);
+			path = CarList;
+			sourceTree = "<group>";
+		};
+		01C16ED421E7DAA900DB4C88 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
+				01C16ED521E7DAC100DB4C88 /* BasePresenter.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		01C16ED921E9006200DB4C88 /* CarDetail */ = {
+			isa = PBXGroup;
+			children = (
+				01C16EDA21E900F100DB4C88 /* CarDetailViewController.swift */,
+				01C16EDC21E900FE00DB4C88 /* CarDetailPresenter.swift */,
+			);
+			path = CarDetail;
 			sourceTree = "<group>";
 		};
 		04011E7620FF7624005C05C5 /* fonts */ = {
@@ -206,15 +233,16 @@
 		04BDAB1020FD2007002A1257 /* CGShop */ = {
 			isa = PBXGroup;
 			children = (
+				01C16ECE21E7D93000DB4C88 /* ViewPresenters */,
+				01C16ED421E7DAA900DB4C88 /* Core */,
+				01C16EC721E7BA6400DB4C88 /* APIManager */,
 				0124049421DC1548008A40F5 /* Components */,
 				8467388921003DF100823B79 /* Extensions */,
 				8467388721003DB900823B79 /* Services */,
-				8467388621003DA600823B79 /* ViewModels */,
 				04011E7620FF7624005C05C5 /* fonts */,
 				84A4609720FE5E3F0026AA99 /* Models */,
-				84A4609620FE5E380026AA99 /* Controllers */,
-				84A4609520FE4B9A0026AA99 /* Views */,
 				04BDAB1120FD2007002A1257 /* AppDelegate.swift */,
+				04BDAB1920FD2007002A1257 /* Main.storyboard */,
 				04BDAB1C20FD200A002A1257 /* Assets.xcassets */,
 				04BDAB1E20FD200A002A1257 /* LaunchScreen.storyboard */,
 				04BDAB2120FD200A002A1257 /* Info.plist */,
@@ -241,14 +269,6 @@
 			path = CGShopUITests;
 			sourceTree = "<group>";
 		};
-		04F6790B20FFB4A000D43271 /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-				04F6790820FFA0DB00D43271 /* CarRouter.swift */,
-			);
-			path = Routers;
-			sourceTree = "<group>";
-		};
 		08412AA9F3D3B159AC13C3D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,62 +279,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8467388621003DA600823B79 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				04217D44210102FA0079226C /* RootViewModel.swift */,
-				04217D4C210117C00079226C /* CarViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		8467388721003DB900823B79 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8467388821003DBF00823B79 /* Networking */,
+				01C16ECA21E7BE7B00DB4C88 /* CarService.swift */,
+				01C16ECC21E7C5C200DB4C88 /* ServiceBase.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		8467388821003DBF00823B79 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				04F6790420FF9FAA00D43271 /* APIConfiguration.swift */,
-				04217D482101101B0079226C /* DecodableRx.swift */,
-				04F6790B20FFB4A000D43271 /* Routers */,
-				04217D4621010F870079226C /* Decodable.swift */,
-				04217D4A210110CB0079226C /* ServiceError.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		8467388921003DF100823B79 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8442EC6121018C090097A953 /* UIRefreshControl+Rx.swift */,
-				8442EC6021018C080097A953 /* UIStoryboard+Controllers.swift */,
 				04AB44F521025C7B00C5BC7C /* UIViewController.swift */,
 				012404A321E168A8008A40F5 /* UIView.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		84A4609520FE4B9A0026AA99 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				04BDAB1920FD2007002A1257 /* Main.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		84A4609620FE5E380026AA99 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				04BDAB1320FD2007002A1257 /* RootViewController.swift */,
-				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
-				04AB44F7210260B400C5BC7C /* CarDetailViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		84A4609720FE5E3F0026AA99 /* Models */ = {
@@ -410,13 +390,16 @@
 				TargetAttributes = {
 					04BDAB0D20FD2007002A1257 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 					04BDAB2520FD200A002A1257 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 						TestTargetID = 04BDAB0D20FD2007002A1257;
 					};
 					04BDAB3020FD200A002A1257 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 						TestTargetID = 04BDAB0D20FD2007002A1257;
 					};
 				};
@@ -565,25 +548,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04217D4B210110CB0079226C /* ServiceError.swift in Sources */,
-				012404A021DFC358008A40F5 /* RoundUIView.swift in Sources */,
 				0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */,
-				04217D45210102FA0079226C /* RootViewModel.swift in Sources */,
-				04F6790920FFA0DB00D43271 /* CarRouter.swift in Sources */,
+				01C16EC921E7BA8900DB4C88 /* BRQAPIService.swift in Sources */,
 				04F6790220FF9F1B00D43271 /* Constants.swift in Sources */,
-				04217D4721010F870079226C /* Decodable.swift in Sources */,
-				04F6790520FF9FAA00D43271 /* APIConfiguration.swift in Sources */,
-				04217D4D210117C00079226C /* CarViewModel.swift in Sources */,
+				01C16ED121E7D96700DB4C88 /* CarListViewController.swift in Sources */,
+				01C16ECB21E7BE7B00DB4C88 /* CarService.swift in Sources */,
+				01C16ECD21E7C5C200DB4C88 /* ServiceBase.swift in Sources */,
 				04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */,
-				8442EC6321018C090097A953 /* UIRefreshControl+Rx.swift in Sources */,
 				04217D432100F9A70079226C /* Car.swift in Sources */,
-				04AB44F8210260B400C5BC7C /* CarDetailViewController.swift in Sources */,
 				012404A421E168A8008A40F5 /* UIView.swift in Sources */,
-				04BDAB1420FD2007002A1257 /* RootViewController.swift in Sources */,
-				04217D492101101B0079226C /* DecodableRx.swift in Sources */,
+				01C16EDD21E900FE00DB4C88 /* CarDetailPresenter.swift in Sources */,
+				01C16EDB21E900F100DB4C88 /* CarDetailViewController.swift in Sources */,
+				01C16ED321E7D9CE00DB4C88 /* CarListPresenter.swift in Sources */,
+				01C16ED621E7DAC100DB4C88 /* BasePresenter.swift in Sources */,
 				012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */,
 				04AB44F621025C7B00C5BC7C /* UIViewController.swift in Sources */,
-				8442EC6221018C090097A953 /* UIStoryboard+Controllers.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,7 +746,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.cg.CGShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -786,7 +765,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.cg.CGShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -806,7 +785,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.cg.CGShopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGShop.app/CGShop";
 			};
@@ -827,7 +806,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.cg.CGShopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGShop.app/CGShop";
 			};
@@ -847,7 +826,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.cg.CGShopUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CGShop;
 			};
@@ -867,7 +846,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.cg.CGShopUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CGShop;
 			};
