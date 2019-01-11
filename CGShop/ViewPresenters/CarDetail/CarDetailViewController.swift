@@ -37,7 +37,6 @@ class CarDetailViewController : BaseViewController {
     }
 }
 
-
 // MARK - CarDetail Protocol
 extension CarDetailViewController : CarDetailViewProtocol {
     

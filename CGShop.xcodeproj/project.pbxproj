@@ -189,6 +189,7 @@
 				010095EE21E9222C00B9F143 /* LoadableViewController.swift */,
 				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
 				01C16ED521E7DAC100DB4C88 /* BasePresenter.swift */,
+				010095EE21E9222C00B9F143 /* LoadableViewController.swift */,
 				010095F021E92C6E00B9F143 /* BaseView.swift */,
 			);
 			path = Core;

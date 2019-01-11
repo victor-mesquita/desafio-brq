@@ -11,7 +11,7 @@ import Lottie
 
 class LoadableViewController : UIViewController {
     let animationView = LOTAnimationView(name: "LoadingAnimation")
-
+    
     func showLoading() -> Void {
         animationView.center = self.view.center
         animationView.contentMode = .scaleAspectFill

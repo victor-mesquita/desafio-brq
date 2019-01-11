@@ -9,7 +9,7 @@ target 'CGShop' do
   pod 'RxSwift',    '~> 4.0'
   pod 'Moya/RxSwift', '11.0'
   pod 'Alamofire', '~> 4.1'
-  pod 'lottie-ios', '~> 2.5.2'
+  pod 'lottie-ios', '~> 2.5.2' 
  
   # Pods for CGShop
 
