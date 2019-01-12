@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		010095EF21E9222C00B9F143 /* LoadableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010095EE21E9222C00B9F143 /* LoadableViewController.swift */; };
 		010095F121E92C6E00B9F143 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010095F021E92C6E00B9F143 /* BaseView.swift */; };
-		0124049321DBFDB7008A40F5 /* UICarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124049221DBFDB7008A40F5 /* UICarCellView.xib */; };
-		0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124049621DC158E008A40F5 /* UICarCellView.swift */; };
 		012404A421E168A8008A40F5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A321E168A8008A40F5 /* UIView.swift */; };
 		012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A621E17FA6008A40F5 /* RoundButton.swift */; };
+		01376D7F21E9900B005EAC11 /* UICarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01376D7E21E9900B005EAC11 /* UICarCellView.swift */; };
+		01376D8121E9904A005EAC11 /* UICarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01376D8021E9904A005EAC11 /* UICarCellView.xib */; };
+		01494D5421E969F00025A4A4 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01494D5321E969F00025A4A4 /* EventEmitter.swift */; };
 		01C16EC921E7BA8900DB4C88 /* BRQAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16EC821E7BA8900DB4C88 /* BRQAPIService.swift */; };
 		01C16ECB21E7BE7B00DB4C88 /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16ECA21E7BE7B00DB4C88 /* CarService.swift */; };
 		01C16ECD21E7C5C200DB4C88 /* ServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16ECC21E7C5C200DB4C88 /* ServiceBase.swift */; };
@@ -60,10 +61,11 @@
 /* Begin PBXFileReference section */
 		010095EE21E9222C00B9F143 /* LoadableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableViewController.swift; sourceTree = "<group>"; };
 		010095F021E92C6E00B9F143 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		0124049221DBFDB7008A40F5 /* UICarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICarCellView.xib; sourceTree = "<group>"; };
-		0124049621DC158E008A40F5 /* UICarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICarCellView.swift; sourceTree = "<group>"; };
 		012404A321E168A8008A40F5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		012404A621E17FA6008A40F5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		01376D7E21E9900B005EAC11 /* UICarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICarCellView.swift; sourceTree = "<group>"; };
+		01376D8021E9904A005EAC11 /* UICarCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICarCellView.xib; sourceTree = "<group>"; };
+		01494D5321E969F00025A4A4 /* EventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
 		01C16EC821E7BA8900DB4C88 /* BRQAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRQAPIService.swift; sourceTree = "<group>"; };
 		01C16ECA21E7BE7B00DB4C88 /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
 		01C16ECC21E7C5C200DB4C88 /* ServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBase.swift; sourceTree = "<group>"; };
@@ -134,19 +136,10 @@
 		0124049421DC1548008A40F5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				01376D7D21E98FF5005EAC11 /* UICarCellView */,
 				012404A521E17F89008A40F5 /* RoundButton */,
-				0124049521DC1559008A40F5 /* CarCell */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		0124049521DC1559008A40F5 /* CarCell */ = {
-			isa = PBXGroup;
-			children = (
-				0124049221DBFDB7008A40F5 /* UICarCellView.xib */,
-				0124049621DC158E008A40F5 /* UICarCellView.swift */,
-			);
-			name = CarCell;
 			sourceTree = "<group>";
 		};
 		012404A521E17F89008A40F5 /* RoundButton */ = {
@@ -155,6 +148,15 @@
 				012404A621E17FA6008A40F5 /* RoundButton.swift */,
 			);
 			name = RoundButton;
+			sourceTree = "<group>";
+		};
+		01376D7D21E98FF5005EAC11 /* UICarCellView */ = {
+			isa = PBXGroup;
+			children = (
+				01376D8021E9904A005EAC11 /* UICarCellView.xib */,
+				01376D7E21E9900B005EAC11 /* UICarCellView.swift */,
+			);
+			name = UICarCellView;
 			sourceTree = "<group>";
 		};
 		01C16EC721E7BA6400DB4C88 /* APIManager */ = {
@@ -186,11 +188,11 @@
 		01C16ED421E7DAA900DB4C88 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				010095EE21E9222C00B9F143 /* LoadableViewController.swift */,
 				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
 				01C16ED521E7DAC100DB4C88 /* BasePresenter.swift */,
 				010095EE21E9222C00B9F143 /* LoadableViewController.swift */,
 				010095F021E92C6E00B9F143 /* BaseView.swift */,
+				01494D5321E969F00025A4A4 /* EventEmitter.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -437,8 +439,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04011E7C20FF768B005C05C5 /* Exo-Regular.ttf in Resources */,
+				01376D8121E9904A005EAC11 /* UICarCellView.xib in Resources */,
 				04BDAB2020FD200A002A1257 /* LaunchScreen.storyboard in Resources */,
-				0124049321DBFDB7008A40F5 /* UICarCellView.xib in Resources */,
 				04011E7D20FF768B005C05C5 /* Exo-SemiBold.ttf in Resources */,
 				04BDAB1D20FD200A002A1257 /* Assets.xcassets in Resources */,
 				04011E7B20FF768B005C05C5 /* Exo-Bold.ttf in Resources */,
@@ -530,6 +532,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -539,6 +542,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,12 +557,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0124049721DC158E008A40F5 /* UICarCellView.swift in Sources */,
 				01C16EC921E7BA8900DB4C88 /* BRQAPIService.swift in Sources */,
 				04F6790220FF9F1B00D43271 /* Constants.swift in Sources */,
 				01C16ED121E7D96700DB4C88 /* CarListViewController.swift in Sources */,
+				01376D7F21E9900B005EAC11 /* UICarCellView.swift in Sources */,
 				01C16ECB21E7BE7B00DB4C88 /* CarService.swift in Sources */,
 				01C16ECD21E7C5C200DB4C88 /* ServiceBase.swift in Sources */,
+				01494D5421E969F00025A4A4 /* EventEmitter.swift in Sources */,
 				04217D4F21013C5F0079226C /* CarGridFlowLayout.swift in Sources */,
 				04217D432100F9A70079226C /* Car.swift in Sources */,
 				010095EF21E9222C00B9F143 /* LoadableViewController.swift in Sources */,

@@ -37,6 +37,10 @@ class CarListViewController : BaseViewController {
     fileprivate func configureUiCollectionLayout(){
         uiCarsCollection.collectionViewLayout = CarGridFlowLayout()
     }
+    
+    override func willSkeleton() -> Bool {
+        return false
+    }
 }
 
 extension CarListViewController : CarListViewProtocol {

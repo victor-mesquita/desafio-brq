@@ -35,7 +35,7 @@ class UICarCellView: UICollectionViewCell {
     {
         view = loadViewFromNib()
         view.frame = bounds
-     
+        
         addSubview(view)
     }
     

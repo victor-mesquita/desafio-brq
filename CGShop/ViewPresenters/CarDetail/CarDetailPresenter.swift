@@ -22,6 +22,7 @@ class CarDetailPresenter: BasePresenter<CarDetailViewController> {
             CarService.getCar(id: id, callback: {(success, data, errorMessage) in
                 if success {
                     viewController.setupCarDetail(car: data!);
+                    viewController.loadableComplete()
                 } else {
                     viewController.dismiss(animated: true, completion: nil)
                     viewController.showUnavailableCarAlert()
