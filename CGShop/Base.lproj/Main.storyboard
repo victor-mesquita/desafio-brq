@@ -151,6 +151,9 @@
                                                     <constraint firstAttribute="width" constant="25" id="wRR-nX-TC6"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="Close"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onClick:" destination="Eqb-Oj-aFc" eventType="touchUpInside" id="aWW-c0-3xH"/>
                                                 </connections>
@@ -205,6 +208,7 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-Bu-ps9">
@@ -218,6 +222,9 @@
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XzF-7D-qsu">
                                                         <rect key="frame" x="230" y="466" width="94" height="29"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onAmountChange:" destination="Eqb-Oj-aFc" eventType="valueChanged" id="v45-sd-RCi"/>
                                                         </connections>
@@ -227,6 +234,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,6 +277,9 @@
                                             <constraint firstAttribute="trailing" secondItem="Xlq-VP-yUD" secondAttribute="trailing" id="r3p-mF-CP5"/>
                                             <constraint firstAttribute="height" constant="800" id="wSZ-BU-1rQ"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -276,6 +289,9 @@
                                     <constraint firstItem="BeM-vI-xpf" firstAttribute="centerX" secondItem="SbT-rC-F1Z" secondAttribute="centerX" id="rW4-7j-TuE"/>
                                     <constraint firstAttribute="bottom" secondItem="BeM-vI-xpf" secondAttribute="bottom" id="wIi-jx-p3U"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,6 +315,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVD-ov-KIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3749.275362318841" y="-45.535714285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nVH-vU-uyV">
+            <objects>
+                <viewController id="RCg-3s-gGA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vG1-BE-LEp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed5-Ul-JOd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ed5-Ul-JOd" firstAttribute="leading" secondItem="5Nu-yr-wM0" secondAttribute="leading" id="IrJ-CQ-bUb"/>
+                            <constraint firstItem="5Nu-yr-wM0" firstAttribute="bottom" secondItem="Ed5-Ul-JOd" secondAttribute="bottom" id="eP8-1W-ica"/>
+                            <constraint firstItem="5Nu-yr-wM0" firstAttribute="trailing" secondItem="Ed5-Ul-JOd" secondAttribute="trailing" id="lqj-cG-Fsp"/>
+                            <constraint firstItem="Ed5-Ul-JOd" firstAttribute="top" secondItem="5Nu-yr-wM0" secondAttribute="top" id="qD2-tm-I9Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Nu-yr-wM0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISJ-jF-XTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4689" y="-42"/>
         </scene>
     </scenes>
     <resources>

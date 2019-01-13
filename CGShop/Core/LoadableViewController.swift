@@ -9,6 +9,7 @@
 import Foundation
 import Lottie
 import SkeletonView
+import Emity
 
 protocol LoadableViewControllerProtocol {
     func willSkeleton() -> Bool
@@ -18,7 +19,7 @@ protocol LoadableViewControllerProtocol {
 }
 
 class LoadableViewController : UIViewController, LoadableViewControllerProtocol {
-    let eventEmitter = EventEmitter()
+    let eventEmitter = Emity()
     
     let animationView = LOTAnimationView(name: "LoadingAnimation")
     
@@ -41,7 +42,7 @@ class LoadableViewController : UIViewController, LoadableViewControllerProtocol 
     }
     
     func loadableComplete() {
-        eventEmitter.emit(eventName: "loadableComplete")
+        eventEmitter.emit("loadableComplete")
     }
     
     override func viewDidLoad() {
@@ -51,7 +52,7 @@ class LoadableViewController : UIViewController, LoadableViewControllerProtocol 
         {
             view.showAnimatedSkeleton()
             
-            eventEmitter.on(eventName: "loadableComplete", fn: {
+            eventEmitter.on("loadableComplete", callback: {
                 self.view.hideSkeleton()
             })
         }

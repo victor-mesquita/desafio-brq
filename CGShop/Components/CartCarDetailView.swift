@@ -1,22 +1,16 @@
 //
-//  UICarCellView.swift
+//  CartCarDetailView.swift
 //  CGShop
 //
-//  Created by Victor Mesquita on 01/01/2019.
+//  Created by Victor Mesquita on 1/13/19.
 //  Copyright © 2019 cg. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-@IBDesignable
-class UICarCellView: UICollectionViewCell {
-    
-    @IBOutlet weak var ivCarImage: UIImageView!
-    @IBOutlet weak var lbCarName: UILabel!
-    @IBOutlet weak var lbCarPrice: UILabel!
-    
-    private var nibName = "UICarCellView"
+class CartCarDetailView: UIView {
+    private var nibName = "CartCarDetailView"
     private var view: UIView! = nil
     
     required init?(coder aDecoder: NSCoder) {
