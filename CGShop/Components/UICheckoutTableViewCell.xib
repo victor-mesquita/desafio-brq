@@ -103,6 +103,7 @@
                 <outlet property="lbAmount" destination="xa4-Ic-F7D" id="m5M-LB-785"/>
                 <outlet property="lbCarName" destination="Bt8-L7-BNZ" id="h2Z-BQ-HSf"/>
                 <outlet property="lbCarPrice" destination="D9K-Kb-7Dn" id="L7v-U0-3Ln"/>
+                <outlet property="onClickRemove" destination="fxG-Px-mXK" id="vgY-is-UrU"/>
             </connections>
             <point key="canvasLocation" x="164.80000000000001" y="168.21589205397302"/>
         </tableViewCell>

@@ -8,20 +8,29 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 protocol CheckoutViewProtocol {
-    
+    func fetchAndUpdateTableView() -> Void
+    func setupTableView() -> Void
+    func showPriceLimitExceeded(maxValue: Double)
 }
 
-class CheckoutViewController : BaseViewController  {
+class CheckoutViewController : LoadableViewController  {
     var presenter = CheckoutPresenter()
     var checkout: Checkout? = nil
     var checkouted: [Checkout] = [Checkout]()
     
     @IBOutlet weak var tvCheckout: UITableView!
+    @IBOutlet weak var svCheckout: UIStackView!
+    @IBOutlet weak var lbNoCar: UILabel!
     
     @IBAction func onClickBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onClickFinalizar(_ sender: Any) {
+        presenter.completePurchase()
     }
     
     override func viewDidLoad() {
@@ -33,6 +42,29 @@ class CheckoutViewController : BaseViewController  {
         
         setupTableView()
         
+        fetchAndUpdateTableView()
+    }
+    
+    override func willSkeleton() -> Bool {
+        return false
+    }
+    
+    let completeAnimationView = LOTAnimationView(name: "CompleteAnimation")
+    
+    func showCompleteAnimation() -> Void {
+        completeAnimationView.center = self.view.center
+        completeAnimationView.contentMode = .scaleAspectFill
+        self.view.addSubview(completeAnimationView)
+        
+        completeAnimationView.play(completion: { finished in
+            self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+            self.completeAnimationView.removeFromSuperview()
+        })
+    }
+}
+
+extension CheckoutViewController :  CheckoutViewProtocol {
+    func fetchAndUpdateTableView() -> Void {
         self.checkouted = presenter.listCheckouts()
         
         tvCheckout.reloadData()
@@ -42,12 +74,16 @@ class CheckoutViewController : BaseViewController  {
         tvCheckout.register(UICheckoutTableViewCell.nib, forCellReuseIdentifier: ReusableIds.Checkout.CHECKOUT_CELL)
     }
     
-    override func willSkeleton() -> Bool {
-        return false
+    func toggleNoCarLabel() {
+        svCheckout.isHidden = !svCheckout.isHidden
+        lbNoCar.isHidden = !lbNoCar.isHidden
     }
-}
-
-extension CheckoutViewController :  CheckoutViewProtocol {
+    
+    func showPriceLimitExceeded(maxValue: Double) {
+        showOkAlert(title: "Valor excedido", message: "O valor máximo permitido para compra é: \(maxValue)", callback: {
+            return
+        })
+    }
 }
 
 extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource {
@@ -76,5 +112,19 @@ extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource {
         cell.lbCarPrice.text = "R$ \(preco)"
         
         cell.lbAmount.text = String(checkout.amount)
+        
+        cell.onClickRemove.tag = checkout.car.id
+        
+        cell.onClickRemove.addTarget(self, action: #selector(onClickedRemove(_:)), for: .touchUpInside)
+    }
+    
+    @objc func onClickedRemove(_ sender: UIButton){
+        let carId = sender.tag
+        
+        presenter.removeCarFromList(id: carId)
+        
+        if checkouted.count == 0 {
+            toggleNoCarLabel()
+        }
     }
 }

@@ -17,6 +17,8 @@ class UICheckoutTableViewCell: UITableViewCell {
     @IBOutlet weak var lbAmount: UILabel!
     @IBOutlet weak var ivCar: UIImageView!
     
+    @IBOutlet weak var onClickRemove: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

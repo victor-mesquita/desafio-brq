@@ -14,7 +14,7 @@ protocol CarListViewProtocol {
     func reloadCarList(cars: [Car])
 }
 
-class CarListViewController : BaseViewController {
+class CarListViewController : LoadableViewController {
     let presenter = CarListPresenter()
     var carTableData = [Car]()
     var carId: Int = 0

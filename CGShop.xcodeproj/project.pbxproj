@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		010095EF21E9222C00B9F143 /* LoadableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010095EE21E9222C00B9F143 /* LoadableViewController.swift */; };
-		010095F121E92C6E00B9F143 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010095F021E92C6E00B9F143 /* BaseView.swift */; };
+		010095F121E92C6E00B9F143 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010095F021E92C6E00B9F143 /* BaseViewController.swift */; };
 		012404A421E168A8008A40F5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A321E168A8008A40F5 /* UIView.swift */; };
 		012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012404A621E17FA6008A40F5 /* RoundButton.swift */; };
 		01C16EC921E7BA8900DB4C88 /* BRQAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16EC821E7BA8900DB4C88 /* BRQAPIService.swift */; };
@@ -65,7 +65,7 @@
 
 /* Begin PBXFileReference section */
 		010095EE21E9222C00B9F143 /* LoadableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableViewController.swift; sourceTree = "<group>"; };
-		010095F021E92C6E00B9F143 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		010095F021E92C6E00B9F143 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		012404A321E168A8008A40F5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		012404A621E17FA6008A40F5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		01C16EC821E7BA8900DB4C88 /* BRQAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRQAPIService.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 				04217D4E21013C5F0079226C /* CarGridFlowLayout.swift */,
 				01C16ED521E7DAC100DB4C88 /* BasePresenter.swift */,
 				010095EE21E9222C00B9F143 /* LoadableViewController.swift */,
-				010095F021E92C6E00B9F143 /* BaseView.swift */,
+				010095F021E92C6E00B9F143 /* BaseViewController.swift */,
 				01F8EC6A21ECFAB90040CC7E /* InMemoryDb.swift */,
 			);
 			path = Core;
@@ -612,7 +612,7 @@
 				01C16ED321E7D9CE00DB4C88 /* CarListPresenter.swift in Sources */,
 				01C16ED621E7DAC100DB4C88 /* BasePresenter.swift in Sources */,
 				012404A721E17FA6008A40F5 /* RoundButton.swift in Sources */,
-				010095F121E92C6E00B9F143 /* BaseView.swift in Sources */,
+				010095F121E92C6E00B9F143 /* BaseViewController.swift in Sources */,
 				04AB44F621025C7B00C5BC7C /* UIViewController.swift in Sources */,
 				04BDAB1220FD2007002A1257 /* AppDelegate.swift in Sources */,
 				01F8EC6921ECF5E90040CC7E /* Checkout.swift in Sources */,

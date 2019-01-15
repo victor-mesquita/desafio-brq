@@ -12,11 +12,10 @@ import UIKit
 protocol CarDetailViewProtocol {
     func setupCarDetail(car: Car)
     func showUnavailableCarAlert()
-    func showAmountLimitExceeded(allowedAmount: Int)
     func showZeroCarAlert()
 }
 
-class CarDetailViewController : BaseViewController {
+class CarDetailViewController : LoadableViewController {
     
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var lbCarPrice: UILabel!
@@ -74,12 +73,6 @@ extension CarDetailViewController : CarDetailViewProtocol {
     func showUnavailableCarAlert() {
         showOkAlert(title: "Carro indisponível", message: "O carro selecionado não está disponível para compra!", callback: {
             self.loadableComplete()
-        })
-    }
-    
-    func showAmountLimitExceeded(allowedAmount: Int) {
-        showOkAlert(title: "Valor excedido", message: "Selecione um valor entre 1 e \(allowedAmount)", callback: {
-            return
         })
     }
     

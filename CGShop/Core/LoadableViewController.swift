@@ -18,10 +18,8 @@ protocol LoadableViewControllerProtocol {
     func loadableComplete() -> Void
 }
 
-class LoadableViewController : UIViewController, LoadableViewControllerProtocol {
-    let eventEmitter = Emity()
-    
-    let animationView = LOTAnimationView(name: "LoadingAnimation")
+class LoadableViewController : BaseViewController, LoadableViewControllerProtocol {
+    private let animationView = LOTAnimationView(name: "LoadingAnimation")
     
     func showLoading() -> Void {
         animationView.center = self.view.center
@@ -57,4 +55,5 @@ class LoadableViewController : UIViewController, LoadableViewControllerProtocol 
             })
         }
     }
+
 }

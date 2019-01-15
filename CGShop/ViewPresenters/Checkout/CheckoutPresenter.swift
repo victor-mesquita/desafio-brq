@@ -8,7 +8,16 @@
 
 import Foundation
 
-class CheckoutPresenter: BasePresenter<CheckoutViewController> {
+protocol CheckoutPresenterProtocol {
+    func persistCheckout(checkout: Checkout) -> Void
+    func listCheckouts() -> [Checkout]
+    func removeCarFromList(id: Int) -> Void
+    func completePurchase() -> Void    
+}
+
+class CheckoutPresenter: BasePresenter<CheckoutViewController>, CheckoutPresenterProtocol
+{
+    let MAX_PURCHASE_LIMIT = 100000.00;
     static var checkoutDb = InMemoryDb<Checkout>()
     
     func persistCheckout(checkout: Checkout) -> Void {
@@ -19,8 +28,32 @@ class CheckoutPresenter: BasePresenter<CheckoutViewController> {
         }
     }
     
-    func listCheckouts() -> [Checkout]{
+    func listCheckouts() -> [Checkout] {
         return CheckoutPresenter.checkoutDb.list()
     }
     
+    func removeCarFromList(id: Int) {
+        CheckoutPresenter.checkoutDb.remove(id: id)
+        
+        viewController?.fetchAndUpdateTableView()
+    }
+    
+    private func isLimitValid(totalPrice: Double) -> Bool {
+        return totalPrice <= MAX_PURCHASE_LIMIT;
+    }
+    
+    func completePurchase() -> Void
+    {
+        let totalPrice = listCheckouts().map({ Float($0.amount) * $0.car.preco }).reduce(0.0, +)
+        
+        if isLimitValid(totalPrice: Double(totalPrice)) {
+            CheckoutPresenter.checkoutDb = InMemoryDb<Checkout>()
+            
+            viewController?.fetchAndUpdateTableView()
+            
+            viewController?.showCompleteAnimation()
+        }else{
+            viewController?.showPriceLimitExceeded(maxValue: MAX_PURCHASE_LIMIT)
+        }
+    }
 }

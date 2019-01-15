@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import Emity
 
-class BaseViewController: LoadableViewController {
-    
+class BaseViewController : UIViewController {
+    let eventEmitter = Emity()
 }

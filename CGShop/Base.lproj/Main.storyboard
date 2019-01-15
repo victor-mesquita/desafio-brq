@@ -151,7 +151,7 @@
                                                 <rect key="frame" x="0.0" y="230" width="414" height="570"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsD-WQ-UPn">
-                                                        <rect key="frame" x="186.5" y="50" width="41" height="24"/>
+                                                        <rect key="frame" x="186.5" y="46" width="41" height="21"/>
                                                         <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="18"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K03-IM-ETz">
-                                                        <rect key="frame" x="166.5" y="144" width="81" height="24"/>
+                                                        <rect key="frame" x="166.5" y="137" width="81" height="21"/>
                                                         <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="18"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -169,7 +169,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqD-47-R2c">
-                                                        <rect key="frame" x="174.5" y="193" width="65" height="24"/>
+                                                        <rect key="frame" x="175" y="183" width="64.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="18"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -204,7 +204,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-Bu-ps9">
-                                                        <rect key="frame" x="156" y="8" width="102" height="32"/>
+                                                        <rect key="frame" x="156" y="8" width="102" height="28"/>
                                                         <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="24"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -317,6 +317,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nenhum carro na sua lista de compra!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddh-Ed-Un9">
+                                <rect key="frame" x="57.5" y="436.5" width="299.5" height="23"/>
+                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="181" translatesAutoresizingMaskIntoConstraints="NO" id="bhx-1R-cfB">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
@@ -324,7 +330,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="553"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="0GZ-ta-7LX"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="214" id="0GZ-ta-7LX"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkoutCell" rowHeight="51" id="Chg-nc-MMh" customClass="UICartCarDetailView" customModule="CGShop" customModuleProvider="target">
@@ -347,6 +353,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                                 <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="17"/>
                                                 <state key="normal" title="Finalizar compra"/>
+                                                <connections>
+                                                    <action selector="onClickFinalizar:" destination="RCg-3s-gGA" eventType="touchUpInside" id="ZTA-sr-XgI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -391,10 +400,14 @@
                             <constraint firstItem="bhx-1R-cfB" firstAttribute="leading" secondItem="5Nu-yr-wM0" secondAttribute="leading" id="aPZ-6B-gTF"/>
                             <constraint firstItem="bhx-1R-cfB" firstAttribute="top" secondItem="a57-TH-dkV" secondAttribute="bottom" id="dnc-wj-qA5"/>
                             <constraint firstItem="a57-TH-dkV" firstAttribute="trailing" secondItem="5Nu-yr-wM0" secondAttribute="trailing" id="mex-nq-AVj"/>
+                            <constraint firstItem="ddh-Ed-Un9" firstAttribute="centerX" secondItem="vG1-BE-LEp" secondAttribute="centerX" id="tY0-CW-f2P"/>
+                            <constraint firstItem="ddh-Ed-Un9" firstAttribute="centerY" secondItem="vG1-BE-LEp" secondAttribute="centerY" id="wpd-wX-784"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Nu-yr-wM0"/>
                     </view>
                     <connections>
+                        <outlet property="lbNoCar" destination="ddh-Ed-Un9" id="vh3-91-Rbh"/>
+                        <outlet property="svCheckout" destination="bhx-1R-cfB" id="T1x-ve-ECw"/>
                         <outlet property="tvCheckout" destination="Q0G-da-BR7" id="BzD-HQ-VxT"/>
                     </connections>
                 </viewController>
