@@ -7,7 +7,7 @@
 //
 import Foundation
 
-struct Car : Codable{
+struct Car : Codable {
     let id: Int
     let nome: String
     let descricao: String?

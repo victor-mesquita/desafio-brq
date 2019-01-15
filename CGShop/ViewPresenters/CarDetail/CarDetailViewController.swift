@@ -30,6 +30,10 @@ class CarDetailViewController : BaseViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onClickBuy(_ sender: Any) {
+        performSegue(withIdentifier: Segues.CHECKOUT_SEGUE, sender: nil)
+    }
+    
     @IBAction func onAmountChange(_ sender: Any) {
         if let uiStepper = sender as? UIStepper
         {
@@ -43,6 +47,13 @@ class CarDetailViewController : BaseViewController {
         presenter.attachToView(viewController: self)
         
         presenter.fetchCarDetail(id: carId)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let checkoutViewController = segue.destination as? CheckoutViewController, segue.identifier == Segues.CHECKOUT_SEGUE {
+            
+            checkoutViewController.checkout = self.presenter.proceedToCheckout(numberOfCars: Int(lbAmount.text!)!);
+        }
     }
 }
 

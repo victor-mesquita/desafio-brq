@@ -18,12 +18,15 @@ class CarListViewController : BaseViewController {
     let presenter = CarListPresenter()
     var carTableData = [Car]()
     var carId: Int = 0
+
     
     @IBOutlet weak var filterCarSearchBar: UISearchBar!
     @IBOutlet weak var uiCarsCollection: UICollectionView!
     
     override func viewDidLoad() {
         self.presenter.attachToView(viewController: self)
+        
+        setupCollectionView()
         
         presenter.fetchCarList()
         
@@ -32,6 +35,10 @@ class CarListViewController : BaseViewController {
     
     func setupView() {
         configureUiCollectionLayout()
+    }
+    
+    func setupCollectionView(){
+        uiCarsCollection.register(UICarCollectionViewCell.nib, forCellWithReuseIdentifier: ReusableIds.CarList.PRODUCT_ITEM_CELL)
     }
     
     fileprivate func configureUiCollectionLayout(){
@@ -65,7 +72,7 @@ extension CarListViewController : UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReusableIds.CarList.PRODUCT_ITEM_CELL, for: indexPath) as! UICarCellView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReusableIds.CarList.PRODUCT_ITEM_CELL, for: indexPath) as! UICarCollectionViewCell
         
         
         setCellData(cell: cell, indexPath: indexPath)
@@ -82,17 +89,17 @@ extension CarListViewController : UICollectionViewDelegate, UICollectionViewData
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let carDetailVieController = segue.destination as? CarDetailViewController, segue.identifier == Segues.CAR_DETAIL_SEGUE {
-            carDetailVieController.carId = self.carId;
+        if let carDetailViewController = segue.destination as? CarDetailViewController, segue.identifier == Segues.CAR_DETAIL_SEGUE {
+            carDetailViewController.carId = self.carId;
         }
     }
     
-    func setCellData(cell: UICarCellView, indexPath: IndexPath){
+    func setCellData(cell: UICarCollectionViewCell, indexPath: IndexPath){
         let car:Car = carTableData[indexPath.row]
         
         cell.lbCarName.text = car.nome
         
-        cell.ivCarImage.kf.setImage(with: URL(string: car.imagem), placeholder: UIImage(named: "placeholder"))
+        cell.ivCar.kf.setImage(with: URL(string: car.imagem), placeholder: UIImage(named: "placeholder"))
         
         let preco = String(describing: car.preco)
         

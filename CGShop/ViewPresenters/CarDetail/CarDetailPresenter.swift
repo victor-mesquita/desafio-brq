@@ -14,6 +14,7 @@ protocol CarDetailPresenterProtocol {
 }
 
 class CarDetailPresenter: BasePresenter<CarDetailViewController> {
+    private var carCache: Car? = nil
     
     func fetchCarDetail(id: Int) -> Void {
         if let viewController = self.viewController {
@@ -21,8 +22,11 @@ class CarDetailPresenter: BasePresenter<CarDetailViewController> {
             
             CarService.getCar(id: id, callback: {(success, data, errorMessage) in
                 if success {
-                    viewController.setupCarDetail(car: data!);
+                    self.carCache = data;
+                    
+                    viewController.setupCarDetail(car: self.carCache!);
                     viewController.loadableComplete()
+                    
                 } else {
                     viewController.dismiss(animated: true, completion: nil)
                     viewController.showUnavailableCarAlert()
@@ -31,5 +35,17 @@ class CarDetailPresenter: BasePresenter<CarDetailViewController> {
                 viewController.hideLoading()
             })
         }
+    }
+    
+    func proceedToCheckout(numberOfCars: Int) -> Checkout?
+    {
+        if let car = carCache {
+            
+            let checkout = Checkout(amount: numberOfCars, car: car)
+            
+            return checkout
+        }
+        
+        return nil
     }
 }

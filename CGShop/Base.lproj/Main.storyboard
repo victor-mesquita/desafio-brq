@@ -26,7 +26,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgV-ye-vFm">
                                 <rect key="frame" x="0.0" y="44" width="414" height="24"/>
                                 <items>
-                                    <navigationItem title="Title" id="ZFo-FL-ZMb"/>
+                                    <navigationItem title="Carros" id="ZFo-FL-ZMb"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyB-Lb-OPE">
@@ -51,18 +51,7 @@
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productitem" id="gxg-U5-5gg" customClass="UICarCellView" customModule="CGShop" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="176" height="216"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="216"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="customSize" width="176" height="216"/>
-                                            </collectionViewCell>
-                                        </cells>
+                                        <cells/>
                                         <connections>
                                             <outlet property="dataSource" destination="703-4V-yAM" id="4Ct-LA-bk3"/>
                                             <outlet property="delegate" destination="703-4V-yAM" id="V6D-8I-Tcc"/>
@@ -162,7 +151,7 @@
                                                 <rect key="frame" x="0.0" y="230" width="414" height="570"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsD-WQ-UPn">
-                                                        <rect key="frame" x="186" y="50" width="42" height="24"/>
+                                                        <rect key="frame" x="186.5" y="50" width="41" height="24"/>
                                                         <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="18"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -210,9 +199,12 @@
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickBuy:" destination="Eqb-Oj-aFc" eventType="touchUpInside" id="IcK-ge-1xX"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-Bu-ps9">
-                                                        <rect key="frame" x="155.5" y="8" width="103" height="32"/>
+                                                        <rect key="frame" x="156" y="8" width="102" height="32"/>
                                                         <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="24"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -310,37 +302,105 @@
                         <outlet property="lbCarPrice" destination="WsD-WQ-UPn" id="rDU-Lk-ew2"/>
                         <outlet property="lbContentDescrition" destination="CqD-47-R2c" id="PxK-5D-2OR"/>
                         <outlet property="uiStepperAmount" destination="XzF-7D-qsu" id="ufh-h0-QAm"/>
+                        <segue destination="RCg-3s-gGA" kind="show" identifier="checkoutSegue" id="WBa-2A-Xdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVD-ov-KIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3749.275362318841" y="-45.535714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Checkout View Controller-->
         <scene sceneID="nVH-vU-uyV">
             <objects>
-                <viewController id="RCg-3s-gGA" sceneMemberID="viewController">
+                <viewController id="RCg-3s-gGA" customClass="CheckoutViewController" customModule="CGShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vG1-BE-LEp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed5-Ul-JOd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="181" translatesAutoresizingMaskIntoConstraints="NO" id="bhx-1R-cfB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0G-da-BR7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="553"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="0GZ-ta-7LX"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkoutCell" rowHeight="51" id="Chg-nc-MMh" customClass="UICartCarDetailView" customModule="CGShop" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="51"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Chg-nc-MMh" id="6ra-HZ-xcB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="RCg-3s-gGA" id="IRS-NM-g6q"/>
+                                        </connections>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZO-Xn-WSa">
+                                        <rect key="frame" x="0.0" y="734" width="414" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6H-3N-gzD">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="17"/>
+                                                <state key="normal" title="Finalizar compra"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="G6H-3N-gzD" firstAttribute="top" secondItem="aZO-Xn-WSa" secondAttribute="top" id="3mm-u2-InG"/>
+                                            <constraint firstItem="G6H-3N-gzD" firstAttribute="centerX" secondItem="aZO-Xn-WSa" secondAttribute="centerX" id="NXn-ay-Qsv"/>
+                                            <constraint firstAttribute="height" constant="40" id="PIu-7m-wns"/>
+                                            <constraint firstAttribute="bottom" secondItem="G6H-3N-gzD" secondAttribute="bottom" id="Rh9-Kz-Qq1"/>
+                                            <constraint firstAttribute="trailing" secondItem="G6H-3N-gzD" secondAttribute="trailing" id="cha-sT-CAb"/>
+                                            <constraint firstItem="G6H-3N-gzD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aZO-Xn-WSa" secondAttribute="leading" id="kyv-M0-GWH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aZO-Xn-WSa" secondAttribute="trailing" id="Dt8-Sq-yDx"/>
+                                    <constraint firstItem="Q0G-da-BR7" firstAttribute="top" secondItem="bhx-1R-cfB" secondAttribute="top" id="FZ7-Cr-uTZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="aZO-Xn-WSa" secondAttribute="bottom" id="LDQ-VP-bLF"/>
+                                    <constraint firstItem="Q0G-da-BR7" firstAttribute="leading" secondItem="bhx-1R-cfB" secondAttribute="leading" id="UbW-fb-aw2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q0G-da-BR7" secondAttribute="trailing" id="f8z-Ka-aAV"/>
+                                    <constraint firstItem="aZO-Xn-WSa" firstAttribute="leading" secondItem="bhx-1R-cfB" secondAttribute="leading" id="fck-kS-lwP"/>
+                                </constraints>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a57-TH-dkV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Finalizar compra" id="uAr-bH-u4Z">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="FiD-0N-j3y">
+                                            <connections>
+                                                <action selector="onClickBack:" destination="RCg-3s-gGA" id="Esf-BB-na2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ed5-Ul-JOd" firstAttribute="leading" secondItem="5Nu-yr-wM0" secondAttribute="leading" id="IrJ-CQ-bUb"/>
-                            <constraint firstItem="5Nu-yr-wM0" firstAttribute="bottom" secondItem="Ed5-Ul-JOd" secondAttribute="bottom" id="eP8-1W-ica"/>
-                            <constraint firstItem="5Nu-yr-wM0" firstAttribute="trailing" secondItem="Ed5-Ul-JOd" secondAttribute="trailing" id="lqj-cG-Fsp"/>
-                            <constraint firstItem="Ed5-Ul-JOd" firstAttribute="top" secondItem="5Nu-yr-wM0" secondAttribute="top" id="qD2-tm-I9Y"/>
+                            <constraint firstItem="bhx-1R-cfB" firstAttribute="bottom" secondItem="5Nu-yr-wM0" secondAttribute="bottom" id="6P5-JK-FzQ"/>
+                            <constraint firstItem="bhx-1R-cfB" firstAttribute="trailing" secondItem="5Nu-yr-wM0" secondAttribute="trailing" id="OVZ-Lm-08H"/>
+                            <constraint firstItem="a57-TH-dkV" firstAttribute="leading" secondItem="5Nu-yr-wM0" secondAttribute="leading" id="U4Z-Rw-qU7"/>
+                            <constraint firstItem="a57-TH-dkV" firstAttribute="top" secondItem="5Nu-yr-wM0" secondAttribute="top" id="VW2-4O-F9C"/>
+                            <constraint firstItem="bhx-1R-cfB" firstAttribute="leading" secondItem="5Nu-yr-wM0" secondAttribute="leading" id="aPZ-6B-gTF"/>
+                            <constraint firstItem="bhx-1R-cfB" firstAttribute="top" secondItem="a57-TH-dkV" secondAttribute="bottom" id="dnc-wj-qA5"/>
+                            <constraint firstItem="a57-TH-dkV" firstAttribute="trailing" secondItem="5Nu-yr-wM0" secondAttribute="trailing" id="mex-nq-AVj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Nu-yr-wM0"/>
                     </view>
+                    <connections>
+                        <outlet property="tvCheckout" destination="Q0G-da-BR7" id="BzD-HQ-VxT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISJ-jF-XTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4689" y="-42"/>
+            <point key="canvasLocation" x="4686.9565217391309" y="-42.857142857142854"/>
         </scene>
     </scenes>
     <resources>
