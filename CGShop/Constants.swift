@@ -20,10 +20,15 @@ struct ErrorMessage {
 
 struct Segues {
     static let CAR_DETAIL_SEGUE = "carDetailSegue"
+    static let CHECKOUT_SEGUE = "checkoutSegue"
 }
 
 struct ReusableIds {
     struct CarList {
         static let PRODUCT_ITEM_CELL = "productitem"
+    }
+    
+    struct Checkout {
+        static let CHECKOUT_CELL = "checkoutCell"
     }
 }

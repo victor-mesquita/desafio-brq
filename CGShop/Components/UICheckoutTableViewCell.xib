@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exo-Regular.ttf">
+            <string>Exo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="checkoutCell" rowHeight="200" id="KGk-i7-Jjw" customClass="UICheckoutTableViewCell" customModule="CGShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a58-KQ-3UM">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="199.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEu-0h-xaj">
+                                <rect key="frame" x="20" y="20" width="150" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="ucE-KO-JBs"/>
+                                    <constraint firstAttribute="width" constant="150" id="ygW-Au-mSg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa4-Ic-F7D">
+                                <rect key="frame" x="119" y="165" width="12" height="23"/>
+                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt8-L7-BNZ">
+                                <rect key="frame" x="271" y="30" width="102.5" height="32"/>
+                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9K-Kb-7Dn">
+                                <rect key="frame" x="289" y="70" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxG-Px-mXK">
+                                <rect key="frame" x="271" y="120" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="en5-ye-7fC"/>
+                                </constraints>
+                                <state key="normal" title="Remover">
+                                    <color key="titleColor" red="1" green="0.060358078400000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quantidade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy1-KN-zGw">
+                                <rect key="frame" x="25" y="165" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="cGA-L0-r60"/>
+                                    <constraint firstAttribute="height" constant="21" id="dqR-kO-0VG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="D9K-Kb-7Dn" secondAttribute="trailing" constant="61" id="023-aR-wv0"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="199.5" id="0LQ-32-hI4"/>
+                            <constraint firstItem="Bt8-L7-BNZ" firstAttribute="top" secondItem="a58-KQ-3UM" secondAttribute="top" constant="30" id="2DQ-Ov-Yvg"/>
+                            <constraint firstItem="D9K-Kb-7Dn" firstAttribute="top" secondItem="Bt8-L7-BNZ" secondAttribute="bottom" constant="8" id="5Ur-lL-5H8"/>
+                            <constraint firstItem="xa4-Ic-F7D" firstAttribute="top" secondItem="KEu-0h-xaj" secondAttribute="bottom" constant="15" id="JnC-Hd-g5j"/>
+                            <constraint firstAttribute="trailing" secondItem="fxG-Px-mXK" secondAttribute="trailing" constant="42" id="KSb-QH-g1t"/>
+                            <constraint firstItem="fxG-Px-mXK" firstAttribute="top" secondItem="D9K-Kb-7Dn" secondAttribute="bottom" constant="29" id="QHB-2N-BzY"/>
+                            <constraint firstItem="uy1-KN-zGw" firstAttribute="top" secondItem="KEu-0h-xaj" secondAttribute="bottom" constant="15" id="X22-Ax-Vcf"/>
+                            <constraint firstAttribute="trailing" secondItem="Bt8-L7-BNZ" secondAttribute="trailing" constant="42.5" id="fs6-cy-Uog"/>
+                            <constraint firstItem="xa4-Ic-F7D" firstAttribute="leading" secondItem="uy1-KN-zGw" secondAttribute="trailing" constant="3" id="hWe-Fi-idK"/>
+                            <constraint firstItem="KEu-0h-xaj" firstAttribute="leading" secondItem="a58-KQ-3UM" secondAttribute="leading" constant="20" id="jm3-77-hTP"/>
+                            <constraint firstItem="uy1-KN-zGw" firstAttribute="leading" secondItem="a58-KQ-3UM" secondAttribute="leading" constant="25" id="qpc-lT-1bC"/>
+                            <constraint firstItem="KEu-0h-xaj" firstAttribute="top" secondItem="a58-KQ-3UM" secondAttribute="top" constant="20" id="v80-lv-sVm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="a58-KQ-3UM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6LJ-gT-Jmo"/>
+                    <constraint firstAttribute="bottom" secondItem="a58-KQ-3UM" secondAttribute="bottom" id="KKN-z2-k6O"/>
+                    <constraint firstAttribute="trailing" secondItem="a58-KQ-3UM" secondAttribute="trailing" id="Kee-uH-Wpy"/>
+                    <constraint firstItem="a58-KQ-3UM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LvC-Rn-vGB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ivCar" destination="KEu-0h-xaj" id="ghI-D6-ySK"/>
+                <outlet property="lbAmount" destination="xa4-Ic-F7D" id="m5M-LB-785"/>
+                <outlet property="lbCarName" destination="Bt8-L7-BNZ" id="h2Z-BQ-HSf"/>
+                <outlet property="lbCarPrice" destination="D9K-Kb-7Dn" id="L7v-U0-3Ln"/>
+            </connections>
+            <point key="canvasLocation" x="164.80000000000001" y="168.21589205397302"/>
+        </tableViewCell>
+    </objects>
+</document>

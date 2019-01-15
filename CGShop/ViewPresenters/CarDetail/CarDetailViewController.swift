@@ -12,6 +12,8 @@ import UIKit
 protocol CarDetailViewProtocol {
     func setupCarDetail(car: Car)
     func showUnavailableCarAlert()
+    func showAmountLimitExceeded(allowedAmount: Int)
+    func showZeroCarAlert()
 }
 
 class CarDetailViewController : BaseViewController {
@@ -30,6 +32,10 @@ class CarDetailViewController : BaseViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onClickBuy(_ sender: Any) {
+        performSegue(withIdentifier: Segues.CHECKOUT_SEGUE, sender: nil)
+    }
+    
     @IBAction func onAmountChange(_ sender: Any) {
         if let uiStepper = sender as? UIStepper
         {
@@ -43,6 +49,13 @@ class CarDetailViewController : BaseViewController {
         presenter.attachToView(viewController: self)
         
         presenter.fetchCarDetail(id: carId)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let checkoutViewController = segue.destination as? CheckoutViewController, segue.identifier == Segues.CHECKOUT_SEGUE {
+            
+            checkoutViewController.checkout = self.presenter.proceedToCheckout(numberOfCars: Int(lbAmount.text!)!);
+        }
     }
 }
 
@@ -59,13 +72,21 @@ extension CarDetailViewController : CarDetailViewProtocol {
     }
     
     func showUnavailableCarAlert() {
-        let alert = UIAlertController(title: "Carro indisponível", message: "O carro selecionado não está disponível para compra!", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        showOkAlert(title: "Carro indisponível", message: "O carro selecionado não está disponível para compra!", callback: {
             self.loadableComplete()
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
+        })
+    }
+    
+    func showAmountLimitExceeded(allowedAmount: Int) {
+        showOkAlert(title: "Valor excedido", message: "Selecione um valor entre 1 e \(allowedAmount)", callback: {
+            return
+        })
+    }
+    
+    func showZeroCarAlert() {
+        showOkAlert(title: "Quantidade obrigatória", message: "Quantidade de carros deve ser informada!", callback: {
+            return
+        })
     }
     
 }
